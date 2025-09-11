@@ -13,26 +13,58 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  // By default, Docusaurus generates a sidebar from the docs folder structure
+  // Main documentation sidebar
   tutorialSidebar: [
-    'intro',
     {
-      type: 'category',
-      label: 'Configuration',
-      items: [
-        'configuration/overview',
-        'configuration/inbound-api',
-        'configuration/outbound-api',
-      ],
+      type: 'doc',
+      id: 'intro',
+      label: 'Welcome',
     },
     {
       type: 'category',
-      label: 'Python Scripts',
+      label: 'Modules',
+      link: {
+        type: 'generated-index',
+        title: 'BJET Odoo Modules',
+        description: 'Documentation for all BJET Odoo modules',
+        keywords: ['modules', 'odoo', 'bjet'],
+      },
       items: [
-        'python-scripts/context-variables',
+        {
+          type: 'category',
+          label: 'API Synchronization Module',
+          link: {
+            type: 'doc',
+            id: 'modules/api-sync/index',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Configuration',
+              items: [
+                'modules/api-sync/configuration/overview',
+                'modules/api-sync/configuration/inbound-api',
+                'modules/api-sync/configuration/outbound-api',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Python Scripts',
+              items: [
+                'modules/api-sync/python-scripts/context-variables',
+              ],
+            },
+            'modules/api-sync/troubleshooting',
+          ],
+        },
+        // Future modules will be added here
+        // {
+        //   type: 'category',
+        //   label: 'Another Module',
+        //   items: [...]
+        // },
       ],
     },
-    'troubleshooting',
   ],
 };
 

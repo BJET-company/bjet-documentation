@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'BJET API Synchronization Module',
-  tagline: 'Comprehensive Odoo API Integration Documentation',
+  title: 'BJET Odoo Modules Documentation',
+  tagline: 'Comprehensive Documentation for BJET Odoo Modules',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -58,7 +58,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'BJET API Sync',
+        title: 'BJET Odoo Modules',
         logo: {
           alt: 'BJET Logo',
           src: 'img/logo.svg',
@@ -71,8 +71,20 @@ const config = {
             label: 'Documentation',
           },
           {
+            type: 'dropdown',
+            label: 'Modules',
+            position: 'left',
+            items: [
+              {
+                label: 'API Synchronization',
+                to: '/docs/modules/api-sync',
+              },
+              // Add more modules here as they become available
+            ],
+          },
+          {
             href: '/postman',
-            label: 'Postman Collection',
+            label: 'Downloads',
             position: 'left',
           },
           {
@@ -94,12 +106,16 @@ const config = {
             title: 'Documentation',
             items: [
               {
-                label: 'Getting Started',
+                label: 'All Modules',
                 to: '/docs/intro',
               },
               {
+                label: 'API Sync Module',
+                to: '/docs/modules/api-sync',
+              },
+              {
                 label: 'Configuration Guide',
-                to: '/docs/configuration/overview',
+                to: '/docs/modules/api-sync/configuration/overview',
               },
             ],
           },
@@ -112,11 +128,11 @@ const config = {
               },
               {
                 label: 'Python Scripts',
-                to: '/docs/python-scripts/context-variables',
+                to: '/docs/modules/api-sync/python-scripts/context-variables',
               },
               {
                 label: 'Troubleshooting',
-                to: '/docs/troubleshooting',
+                to: '/docs/modules/api-sync/troubleshooting',
               },
             ],
           },
@@ -134,7 +150,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} BJET. Version 18.0.1.0.2 | License: OPL-1`,
+        copyright: `Copyright © ${new Date().getFullYear()} BJET. Documentation for Odoo 18.0 Modules`,
       },
       prism: {
         theme: prismThemes.github,

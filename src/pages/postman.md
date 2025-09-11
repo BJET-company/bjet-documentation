@@ -3,11 +3,11 @@ title: Postman Collection
 description: Download the BJET API Synchronization Module Postman collection
 ---
 
-# Postman Collection
+# Postman Collections
 
-## Download Collection
+## API Synchronization Module Collection
 
-Download our pre-configured Postman collection to test the BJET API Synchronization Module endpoints.
+Download the pre-configured Postman collection for testing the API Synchronization Module endpoints.
 
 <a href="/bjet-documentation/postman/bjet-api-sync-collection.json" download className="postman-button">
   📦 Download Postman Collection
