@@ -1,0 +1,419 @@
+{
+  "info": {
+    "name": "BJET API Synchronization Module",
+    "description": "Complete API testing suite for Odoo BJET API Synchronization Module v18.0.1.0.2",
+    "_postman_id": "bjet-api-sync-v18",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8069",
+      "type": "string"
+    },
+    {
+      "key": "bearer_token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "basic_auth_user",
+      "value": "admin",
+      "type": "string"
+    },
+    {
+      "key": "basic_auth_password",
+      "value": "admin",
+      "type": "string"
+    },
+    {
+      "key": "endpoint_name",
+      "value": "partners",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Authentication Examples",
+      "item": [
+        {
+          "name": "No Auth - Public Endpoint",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bj_api_sync/v1/public",
+              "host": ["{{base_url}}"],
+              "path": ["bj_api_sync", "v1", "public"]
+            },
+            "description": "Example of accessing a public endpoint with no authentication required"
+          }
+        },
+        {
+          "name": "Basic Auth - Get Partners",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basic_auth_user}}",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basic_auth_password}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bj_api_sync/v1/partners",
+              "host": ["{{base_url}}"],
+              "path": ["bj_api_sync", "v1", "partners"]
+            },
+            "description": "Example using Basic Authentication (username/password)"
+          }
+        },
+        {
+          "name": "Bearer Token - Get Partners",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearer_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/bj_api_sync/v1/partners",
+              "host": ["{{base_url}}"],
+              "path": ["bj_api_sync", "v1", "partners"]
+            },
+            "description": "Example using Bearer Token authentication"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Partner API",
+      "item": [
+        {
+          "name": "GET All Partners",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/bj_api_sync/v1/partners",
+              "host": ["{{base_url}}"],
+              "path": ["bj_api_sync", "v1", "partners"]
+            },
+            "description": "Retrieve all partners from Odoo"
+          }
+        },
+        {
+          "name": "GET Single Partner",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/bj_api_sync/v1/partners/123",
+              "host": ["{{base_url}}"],
+              "path": ["bj_api_sync", "v1", "partners", "123"]
+            },
+            "description": "Retrieve a specific partner by ID"
+          }
+        },
+        {
+          "name": "POST Create Partner",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Test Partner\",\n    \"email\": \"test@example.com\",\n    \"phone\": \"+1234567890\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/bj_api_sync/v1/partners",
+              "host": ["{{base_url}}"],
+              "path": ["bj_api_sync", "v1", "partners"]
+            },
+            "description": "Create a new partner in Odoo"
+          }
+        },
+        {
+          "name": "PUT Update Partner",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Updated Partner Name\",\n    \"email\": \"updated@example.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/bj_api_sync/v1/partners/123",
+              "host": ["{{base_url}}"],
+              "path": ["bj_api_sync", "v1", "partners", "123"]
+            },
+            "description": "Update an existing partner"
+          }
+        },
+        {
+          "name": "DELETE Partner",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/bj_api_sync/v1/partners/123",
+              "host": ["{{base_url}}"],
+              "path": ["bj_api_sync", "v1", "partners", "123"]
+            },
+            "description": "Delete a partner from Odoo"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Generic Endpoint Examples",
+      "item": [
+        {
+          "name": "GET Generic Endpoint",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/bj_api_sync/v1/{{endpoint_name}}",
+              "host": ["{{base_url}}"],
+              "path": ["bj_api_sync", "v1", "{{endpoint_name}}"]
+            },
+            "description": "Generic GET request - replace {{endpoint_name}} with your configured endpoint"
+          }
+        },
+        {
+          "name": "POST Generic Endpoint",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"field1\": \"value1\",\n    \"field2\": \"value2\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/bj_api_sync/v1/{{endpoint_name}}",
+              "host": ["{{base_url}}"],
+              "path": ["bj_api_sync", "v1", "{{endpoint_name}}"]
+            },
+            "description": "Generic POST request - customize the body based on your field mappings"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Error Scenarios",
+      "item": [
+        {
+          "name": "401 Unauthorized",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer invalid_token",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/bj_api_sync/v1/partners",
+              "host": ["{{base_url}}"],
+              "path": ["bj_api_sync", "v1", "partners"]
+            },
+            "description": "Example of 401 Unauthorized error with invalid token"
+          }
+        },
+        {
+          "name": "404 Not Found",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/bj_api_sync/v1/nonexistent_endpoint",
+              "host": ["{{base_url}}"],
+              "path": ["bj_api_sync", "v1", "nonexistent_endpoint"]
+            },
+            "description": "Example of 404 Not Found error with non-existent endpoint"
+          }
+        },
+        {
+          "name": "405 Method Not Allowed",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/bj_api_sync/v1/partners",
+              "host": ["{{base_url}}"],
+              "path": ["bj_api_sync", "v1", "partners"]
+            },
+            "description": "Example of 405 Method Not Allowed error (PATCH not configured)"
+          }
+        },
+        {
+          "name": "400 Bad Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{bearer_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{ invalid json }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/bj_api_sync/v1/partners",
+              "host": ["{{base_url}}"],
+              "path": ["bj_api_sync", "v1", "partners"]
+            },
+            "description": "Example of 400 Bad Request error with invalid JSON"
+          }
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Pre-request script to log request details",
+          "console.log('Sending request to:', pm.request.url.toString());",
+          "console.log('Method:', pm.request.method);"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Test script to validate responses",
+          "pm.test('Status code is 200', function () {",
+          "    pm.response.to.have.status(200);",
+          "});",
+          "",
+          "pm.test('Response has JSON body', function () {",
+          "    pm.response.to.be.json;",
+          "});",
+          "",
+          "pm.test('Response time is less than 1000ms', function () {",
+          "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+          "});"
+        ]
+      }
+    }
+  ]
+}
