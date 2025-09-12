@@ -61,7 +61,7 @@ const sidebars = {
               type: 'category',
               label: 'API Reference',
               items: [
-                'modules/api-sync/api-reference/api-reference',
+                'modules/api-sync/api-reference/index',
               ],
             },
             {

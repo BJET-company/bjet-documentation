@@ -127,7 +127,6 @@ GET /[endpoint]?domain=[["active","=",true]]
 
 For detailed information about specific topics, see:
 
-- [Complete API Documentation](./api-reference) - Detailed endpoint documentation
 - [Authentication Guide](../configuration/authentication) - Setting up authentication
 - [Field Mapping](../configuration/field-mapping) - Configuring field mappings
 - [Python Scripts](../python-scripts/context-variables) - Advanced transformations
