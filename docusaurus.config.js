@@ -40,9 +40,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/bjet/bjet-documentation/tree/main/',
+          // Edit link removed - no community contributions needed
         },
         blog: false, // Disable blog feature
         theme: {

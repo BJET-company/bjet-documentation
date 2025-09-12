@@ -237,7 +237,7 @@ a:hover {
   
   /* Specific styling */
   background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
-  color: white !important;
+  color: white;
   padding: 1.25rem 2rem;
   min-width: var(--bjet-button-min-width);
   margin: var(--bjet-spacing-lg) auto;
@@ -249,7 +249,7 @@ a:hover {
   text-align: center;
   line-height: 1.2;
   white-space: nowrap;
-  text-decoration: none !important;
+  text-decoration: none;
   
   /* Appearance */
   border: none;
@@ -260,10 +260,15 @@ a:hover {
 
 .postman-button:hover {
   background: linear-gradient(135deg, var(--ifm-color-primary-dark) 0%, var(--ifm-color-primary-darker) 100%);
-  color: white !important;
+  color: white;
   transform: translateY(-3px);
   box-shadow: var(--bjet-shadow-button-hover);
-  text-decoration: none !important;
+  text-decoration: none;
+}
+
+.postman-button:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
 }
 
 /* ---------- Cards ---------- */
@@ -280,7 +285,6 @@ a:hover {
   height: 100%;
   
   /* Performance optimization */
-  will-change: transform;
   contain: layout;
 }
 
