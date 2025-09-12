@@ -84,7 +84,7 @@ export default function NotFound() {
                 <Link to="/docs/modules/api-sync/troubleshooting">🔧 Troubleshooting</Link>
               </li>
               <li style={{ marginBottom: '0.5rem' }}>
-                <Link to="/postman">📮 Postman Collection</Link>
+                <Link to="/docs/downloads/postman">📮 Postman Collection</Link>
               </li>
             </ul>
           </div>

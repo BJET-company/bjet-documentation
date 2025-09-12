@@ -86,6 +86,13 @@ const sidebars = {
         // },
       ],
     },
+    {
+      type: 'category',
+      label: 'Downloads',
+      items: [
+        'downloads/postman',
+      ],
+    },
   ],
 };
 
