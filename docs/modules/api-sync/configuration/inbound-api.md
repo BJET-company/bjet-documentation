@@ -13,29 +13,54 @@ Configure Odoo to receive data from external systems through RESTful API endpoin
 
 Navigate to **Settings > Technical > BJ API > API Configurations** in your Odoo interface.
 
+![API Settings Menu](/img/api-sync/api-settings-menu.png)
+*API Configurations menu in Technical Settings*
+
 ### Step 2: Create New Configuration
 
 Click the **Create** button to start a new API synchronization configuration.
+
+![API Configuration Form](/img/api-sync/api-configuration-form.png)
+*New API Configuration form*
 
 ### Step 3: Set Request Type
 
 Select **Request Type** as **"In"** for inbound data synchronization.
 
+![Inbound Configuration](/img/api-sync/inbound-configuration.png)
+*Select "In" for inbound data synchronization*
+
 ### Step 4: Configure Basic Settings
 
 #### General Settings
+
+![Model Settings](/img/api-sync/model-settings.png)
+*Configure model and filter settings*
+
 - **Name**: Enter a descriptive name (e.g., "Partner Import API")
 - **Model**: Select the target Odoo model (e.g., `res.partner`, `product.product`)
 - **Filter Domain**: Add conditions to filter records (optional)
+
+![Filter Domain Configuration](/img/api-sync/filter-domain-config.png)
+*Set up domain filters for record selection*
+
   ```python
   [('active', '=', True)]
   ```
 
 #### Endpoint Configuration
+
+![Endpoint Configuration](/img/api-sync/endpoint-config.png)
+*Configure the API endpoint identifier*
+
 - **Endpoint**: Define a unique identifier for your endpoint (e.g., "partners")
 - This creates the API path: `/bj_api_sync/v1/partners`
 
 #### HTTP Methods
+
+![HTTP Methods Configuration](/img/api-sync/http-methods-config.png)
+*Select allowed HTTP operations*
+
 Select the allowed operations:
 - **GET**: Retrieve records
 - **POST**: Create new records
@@ -51,11 +76,19 @@ Suitable for internal or public APIs with no security requirements.
 
 #### Basic Authentication
 Requires username and password:
+
+![Basic Authentication](/img/api-sync/basic-auth-config.png)
+*Basic Authentication configuration*
+
 - **Login**: API username
 - **Password**: API password
 
 #### Bearer Token
 Uses API key authentication:
+
+![Bearer Token Authentication](/img/api-sync/bearer-token-config.png)
+*Bearer Token configuration*
+
 - **Bearer Token**: Your API key or access token
 
 Example header:
@@ -67,6 +100,9 @@ Authorization: Bearer your_token_here
 
 Create Configuration Lines to map Odoo fields to API keys:
 
+![Field Mapping Configuration](/img/api-sync/field-mapping.png)
+*Configure field mappings between Odoo and external API*
+
 | Odoo Field | External API Key | Record Identifier | Value Type |
 |------------|------------------|-------------------|------------|
 | name | name | ❌ | Plain |
@@ -74,11 +110,18 @@ Create Configuration Lines to map Odoo fields to API keys:
 | ref | customer_id | ✅ | Plain |
 | phone | contact_phone | ❌ | Plain |
 
+![Configuration Lines Detail](/img/api-sync/configuration-lines-detail.png)
+*Detailed view of configuration lines with all options*
+
 **Important**: Exactly one field must be marked as the Record Identifier.
 
 ### Step 7: Configure Pagination (Optional)
 
 For large datasets:
+
+![Pagination Settings](/img/api-sync/pagination-settings.png)
+*Pagination configuration for large datasets*
+
 - **Is Paginated**: Enable pagination
 - **Page Size**: Records per request (default: 100)
 

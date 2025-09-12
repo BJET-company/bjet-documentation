@@ -17,39 +17,39 @@ The API Synchronization Module is a comprehensive solution that enables seamless
 
 ## Core Features
 
-### 🔄 Bidirectional Synchronization
+### Bidirectional Synchronization
 - **Inbound Processing** – Receive data from external systems into Odoo
 - **Outbound Processing** – Send Odoo data to external systems
 
-### ⚡ Integration Modes
+### Integration Modes
 - **Real-Time Integration** – Synchronize data immediately as changes occur
 - **Scheduled Operations** – Automated synchronization through cron jobs
 
-### 🔐 Authentication Support
+### Authentication Support
 - **No Authentication** – For public or internal APIs
 - **Basic Authentication** – Username and password access
 - **Bearer Token** – API key or token authentication
 - **Custom Headers** – Additional authentication headers
 
-### 🌐 HTTP Protocol Support
+### HTTP Protocol Support
 - **Full REST Support** – GET, POST, PUT, and DELETE methods
 - **Custom Endpoints** – Configurable API endpoint definitions
 - **Parameter Handling** – URL parameters and query strings
 - **Header Management** – Custom HTTP headers configuration
 
-### 🔧 Data Transformation
+### Data Transformation
 - **Field Mapping** – Visual alignment between Odoo fields and API keys
 - **Python Scripting** – Advanced data transformations
 - **Value Calculation** – Multiple methods for computing values
 - **Relational Data** – Support for Many2one, One2many, Many2many
 
-### 🤖 Automation Integration
+### Automation Integration
 - **Cron Jobs** – Schedule-based automatic synchronization
 - **Server Actions** – Manual triggers via Odoo interface
 - **Base Automation** – Event-driven synchronization
 - **Trigger Configuration** – Flexible synchronization rules
 
-### 📊 Monitoring and Debugging
+### Monitoring and Debugging
 - **Request Logging** – Complete audit trail of API communications
 - **Error Tracking** – Detailed error messages with status codes
 - **Performance Settings** – Configurable timeouts
@@ -83,6 +83,34 @@ Map Odoo fields to external API keys:
 - Test with sample data
 - Monitor logs for results
 - Deploy to production
+
+## Module Architecture
+
+```mermaid
+graph TB
+    subgraph "External Systems"
+        EXT[External APIs]
+    end
+    
+    subgraph "BJET API Sync Module"
+        CONFIG[bj.api.sync.config<br/>Main Configuration]
+        LINE[bj.api.sync.config.line<br/>Field Mappings]
+        HEADER[bj.api.sync.header<br/>HTTP Headers]
+        PARAM[bj.api.sync.param<br/>URL Parameters]
+        LOG[bj.api.log<br/>Audit Trail]
+    end
+    
+    subgraph "Odoo"
+        MODEL[Odoo Models]
+    end
+    
+    EXT <-->|REST API| CONFIG
+    CONFIG --> LINE
+    CONFIG --> HEADER
+    CONFIG --> PARAM
+    CONFIG --> LOG
+    CONFIG <--> MODEL
+```
 
 ## Module Components
 

@@ -38,13 +38,30 @@ const sidebars = {
             id: 'modules/api-sync/index',
           },
           items: [
+            'modules/api-sync/quick-start',
             {
               type: 'category',
               label: 'Configuration',
               items: [
                 'modules/api-sync/configuration/overview',
+                'modules/api-sync/configuration/authentication',
+                'modules/api-sync/configuration/field-mapping',
                 'modules/api-sync/configuration/inbound-api',
                 'modules/api-sync/configuration/outbound-api',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Automation',
+              items: [
+                'modules/api-sync/automation/base-automation',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'API Reference',
+              items: [
+                'modules/api-sync/api-reference/api-reference',
               ],
             },
             {
@@ -54,7 +71,11 @@ const sidebars = {
                 'modules/api-sync/python-scripts/context-variables',
               ],
             },
+            'modules/api-sync/technical-architecture',
+            'modules/api-sync/performance-optimization',
+            'modules/api-sync/faq',
             'modules/api-sync/troubleshooting',
+            'modules/api-sync/glossary',
           ],
         },
         // Future modules will be added here

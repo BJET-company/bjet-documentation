@@ -13,13 +13,13 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-github-username.github.io',
+  url: 'https://bjet.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/bjet-documentation/',
 
   // GitHub pages deployment config.
-  organizationName: 'your-github-username', // Usually your GitHub org/user name.
+  organizationName: 'bjet', // Usually your GitHub org/user name.
   projectName: 'bjet-documentation', // Usually your repo name.
 
   onBrokenLinks: 'warn',
@@ -42,26 +42,69 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           editUrl:
-            'https://github.com/your-github-username/bjet-documentation/tree/main/',
+            'https://github.com/bjet/bjet-documentation/tree/main/',
         },
         blog: false, // Disable blog feature
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
       }),
     ],
   ],
+
+  themes: [
+    // Add mermaid theme for diagrams
+    '@docusaurus/theme-mermaid',
+    // Add the local search theme
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        hashed: true,
+        language: ["en"],
+        indexDocs: true,
+        indexBlog: false,
+        docsRouteBasePath: "/docs",
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      }),
+    ],
+  ],
+  
+  markdown: {
+    mermaid: true,
+  },
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
+      announcementBar: {
+        id: 'module_version',
+        content:
+          '<b>API Synchronization Module v18.0.1.0.2</b> - Now available for Odoo 18.0 <a href="/bjet-documentation/docs/modules/api-sync/quick-start">Get Started →</a>',
+        backgroundColor: '#2116e6',
+        textColor: '#ffffff',
+        isCloseable: true,
+      },
       navbar: {
         title: 'BJET Odoo Modules',
         logo: {
           alt: 'BJET Logo',
           src: 'img/logo.svg',
+          href: '/bjet-documentation/',
         },
         items: [
           {
@@ -107,7 +150,7 @@ const config = {
             items: [
               {
                 label: 'All Modules',
-                to: '/docs/intro',
+                to: '/docs/',
               },
               {
                 label: 'API Sync Module',

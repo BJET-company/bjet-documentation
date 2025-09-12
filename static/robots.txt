@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bjet.github.io/bjet-documentation/sitemap.xml
+
+# Disallow crawling of duplicate content
+Disallow: /blog/tags
+Disallow: /blog/archive
+
+# Allow search engines to index documentation
+Allow: /docs/
+
+# Specific bot rules
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Bingbot
+Crawl-delay: 1

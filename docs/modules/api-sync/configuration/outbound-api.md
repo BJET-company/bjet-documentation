@@ -12,12 +12,27 @@ Configure Odoo to send data to external systems automatically based on triggers 
 ### Step 1: Create Base Configuration
 
 1. Navigate to **Settings > Technical > BJ API > API Configurations**
+
+![API Settings Menu](/img/api-sync/api-settings-menu.png)
+*API Configurations menu in Technical Settings*
+
 2. Click **Create**
+
+![API Configuration Form](/img/api-sync/api-configuration-form.png)
+*New API Configuration form*
+
 3. Set **Request Type** to **"Out"** for outbound synchronization
+
+![Outbound Configuration](/img/api-sync/outbound-configuration.png)
+*Select "Out" for outbound data synchronization*
 
 ### Step 2: Configure External API
 
 #### Request URL
+
+![Request URL Configuration](/img/api-sync/request-url-config.png)
+*Configure the external API endpoint URL*
+
 Enter the complete external API endpoint:
 ```
 https://api.example.com/partners
@@ -37,6 +52,10 @@ Outbound configurations require exactly one HTTP method to be selected.
 ### Step 3: Set Timeout Parameters
 
 Configure timeouts to prevent hanging requests:
+
+![Timeout Settings](/img/api-sync/timeout-settings.png)
+*Timeout configuration*
+
 - **Connection Timeout**: Maximum time to establish connection (default: 5 seconds)
 - **Read Timeout**: Maximum time to wait for response (default: 15 seconds)
 
@@ -49,6 +68,10 @@ Read Timeout: 30        # seconds
 ### Step 4: Configure Authentication
 
 #### Basic Authentication
+
+![Basic Authentication](/img/api-sync/basic-auth-config.png)
+*Basic Authentication configuration*
+
 ```python
 Authorization Type: Basic Auth
 Login: api_user
@@ -61,6 +84,10 @@ Authorization: Basic dXNlcjpwYXNz
 ```
 
 #### Bearer Token
+
+![Bearer Token Authentication](/img/api-sync/bearer-token-config.png)
+*Bearer Token configuration*
+
 ```python
 Authorization Type: Bearer Token
 Bearer Token: sk_live_abc123xyz789
@@ -72,6 +99,9 @@ Authorization: Bearer sk_live_abc123xyz789
 ```
 
 ### Step 5: Define Source Model and Filters
+
+![Model Settings](/img/api-sync/model-settings.png)
+*Model and filter configuration*
 
 #### Model Selection
 Choose the Odoo model to synchronize:
@@ -92,6 +122,9 @@ Apply conditions to select specific records:
 
 ### Step 6: Create Field Mappings
 
+![Field Mapping Configuration](/img/api-sync/field-mapping.png)
+*Configure field mappings*
+
 Map Odoo fields to external API structure:
 
 | Odoo Field | External API Key | Value Type | Notes |
@@ -103,6 +136,9 @@ Map Odoo fields to external API structure:
 | partner_id.name | company_name | Relational | Company reference |
 
 ### Step 7: Add Custom Headers
+
+![Headers Configuration](/img/api-sync/headers-config.png)
+*Configure custom HTTP headers*
 
 Configure additional HTTP headers:
 
@@ -124,6 +160,10 @@ config._make_outbound_http_request(record, config.id, timeout=60)
 ```
 
 #### Cron Jobs
+
+![Cron Job Configuration](/img/api-sync/cron-job-config.png)
+*Schedule automated synchronization*
+
 Schedule regular synchronization:
 1. Create a Scheduled Action
 2. Set the model to `bj.api.sync.config`
