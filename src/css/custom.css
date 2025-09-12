@@ -93,7 +93,7 @@
 }
 
 /* Remove default margins from paragraphs inside buttons */
-:where(button, .button, a.button) p {
+:where(button, .button, a.button, .postman-button) p {
   margin: 0;
   padding: 0;
 }
@@ -231,28 +231,39 @@ a:hover {
 
 /* Special Postman Button */
 .postman-button {
-  /* Extends button base */
-  composes: button;
+  /* Block display for centering */
+  display: block;
+  width: fit-content;
   
   /* Specific styling */
   background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
-  color: white;
+  color: white !important;
   padding: 1.25rem 2rem;
   min-width: var(--bjet-button-min-width);
   margin: var(--bjet-spacing-lg) auto;
   box-shadow: var(--bjet-shadow-button);
   
-  /* Center positioning */
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  /* Typography */
+  font-weight: var(--bjet-font-weight-semibold);
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none !important;
+  
+  /* Appearance */
+  border: none;
+  border-radius: var(--ifm-button-border-radius);
+  transition: all var(--bjet-transition-fast);
+  cursor: pointer;
 }
 
 .postman-button:hover {
   background: linear-gradient(135deg, var(--ifm-color-primary-dark) 0%, var(--ifm-color-primary-darker) 100%);
-  color: white;
-  transform: translateX(-50%) translateY(-3px);
+  color: white !important;
+  transform: translateY(-3px);
   box-shadow: var(--bjet-shadow-button-hover);
+  text-decoration: none !important;
 }
 
 /* ---------- Cards ---------- */
