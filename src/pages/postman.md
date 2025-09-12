@@ -96,6 +96,6 @@ If you encounter issues with the Postman collection:
 1. Verify your Odoo instance is running
 2. Check your authentication credentials
 3. Ensure the API endpoints are configured in Odoo
-4. Review the [API Reference](/docs/modules/api-sync/api-reference/) documentation
+4. Review the [API Reference](/docs/modules/api-sync/api-reference) documentation
 
 For additional support, contact [support@bjetpro.com](mailto:support@bjetpro.com)
