@@ -72,7 +72,7 @@ The module uses several models to manage configurations:
 
 ## Next Steps
 
-- [Configure Inbound API](/docs/configuration/inbound-api) - Set up receiving data
-- [Configure Outbound API](/docs/configuration/outbound-api) - Set up sending data
-- [Authentication Setup](/docs/configuration/authentication) - Configure security
-- [Field Mapping](/docs/configuration/field-mapping) - Map data fields
+- [Configure Inbound API](/docs/modules/api-sync/configuration/inbound-api) - Set up receiving data
+- [Configure Outbound API](/docs/modules/api-sync/configuration/outbound-api) - Set up sending data
+- [Authentication Setup](/docs/modules/api-sync/configuration/authentication) - Configure security
+- [Field Mapping](/docs/modules/api-sync/configuration/field-mapping) - Map data fields

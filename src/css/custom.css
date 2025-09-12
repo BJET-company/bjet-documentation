@@ -1,9 +1,20 @@
 /**
  * BJET Documentation Theme
  * Aligned with https://bjetpro.com brand identity
+ * 
+ * Structure:
+ * 1. CSS Custom Properties (Design Tokens)
+ * 2. Base Styles & Resets
+ * 3. Typography
+ * 4. Components
+ * 5. Layout Patterns
+ * 6. Utilities
+ * 7. Dark Mode Overrides
  */
 
-/* You can override the default Infima variables here. */
+/* ============================================
+   1. CSS CUSTOM PROPERTIES (Design Tokens)
+   ============================================ */
 :root {
   /* BJET Brand Colors */
   --ifm-color-primary: #2116e6;
@@ -16,6 +27,8 @@
   
   /* Secondary Colors */
   --ifm-color-secondary: #70A9FF;
+  --ifm-color-secondary-light: #e8e6ff;
+  --ifm-color-secondary-lighter: #d4d1ff;
   --ifm-color-info: #2116e6;
   --ifm-color-success: #00a651;
   --ifm-color-warning: #ffb800;
@@ -25,152 +38,313 @@
   --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   --ifm-code-font-size: 95%;
   --ifm-heading-font-weight: 700;
+  --bjet-font-weight-semibold: 600;
+  --bjet-font-weight-medium: 500;
   
-  /* Spacing */
+  /* Spacing System */
   --ifm-spacing-horizontal: 1.5rem;
   --ifm-spacing-vertical: 1.5rem;
+  --bjet-spacing-xs: 0.25rem;
+  --bjet-spacing-sm: 0.5rem;
+  --bjet-spacing-md: 1rem;
+  --bjet-spacing-lg: 1.5rem;
+  --bjet-spacing-xl: 2rem;
+  --bjet-spacing-2xl: 3rem;
   
-  /* Borders and Shadows */
+  /* Borders and Radii */
   --ifm-global-radius: 0.375rem;
   --ifm-button-border-radius: 9999px;
   --ifm-card-border-radius: 0.5rem;
+  --bjet-border-width: 2px;
+  
+  /* Shadows (Performance optimized) */
   --ifm-global-shadow-lw: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --ifm-global-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --bjet-shadow-button: 0 4px 6px rgba(33, 22, 230, 0.2);
+  --bjet-shadow-button-hover: 0 8px 12px rgba(33, 22, 230, 0.3);
   
-  /* Code Highlighting */
+  /* Transitions */
+  --bjet-transition-fast: 0.2s ease;
+  --bjet-transition-medium: 0.3s ease;
+  
+  /* Z-index Scale */
+  --bjet-z-base: 0;
+  --bjet-z-dropdown: 1000;
+  --bjet-z-sticky: 1020;
+  --bjet-z-fixed: 1030;
+  --bjet-z-modal: 1040;
+  
+  /* Component Specific */
   --docusaurus-highlighted-code-line-bg: rgba(33, 22, 230, 0.1);
-  
-  /* Navbar */
   --ifm-navbar-background-color: #ffffff;
   --ifm-navbar-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   --ifm-navbar-height: 4rem;
+  --bjet-button-min-width: 280px;
+  --bjet-card-min-height: 200px;
 }
 
-/* Dark mode adjustments */
-[data-theme='dark'] {
-  --ifm-color-primary: #70A9FF;
-  --ifm-color-primary-dark: #4c93ff;
-  --ifm-color-primary-darker: #3987ff;
-  --ifm-color-primary-darkest: #0066ff;
-  --ifm-color-primary-light: #94bfff;
-  --ifm-color-primary-lighter: #a7cbff;
-  --ifm-color-primary-lightest: #deecff;
-  
-  --ifm-background-color: #1a1a1a;
-  --ifm-navbar-background-color: #242424;
-  --docusaurus-highlighted-code-line-bg: rgba(112, 169, 255, 0.15);
+/* ============================================
+   2. BASE STYLES & RESETS
+   ============================================ */
+
+/* Improved box model */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-/* Custom styles for BJET documentation */
-.hero {
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+/* Remove default margins from paragraphs inside buttons */
+:where(button, .button, a.button) p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   3. TYPOGRAPHY
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { 
+  font-size: 2rem;
+  margin-block-start: var(--bjet-spacing-xl);
+}
+h3 { 
+  font-size: 1.5rem;
+  color: var(--ifm-color-primary-darker);
+}
+
+/* Links */
+a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  transition: all var(--bjet-transition-fast);
+}
+
+a:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
+}
+
+/* Links on colored backgrounds using :where() for lower specificity */
+:where(.hero, .alert--primary, th) a:not(.button) {
   color: white;
-  padding: 4rem 0;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
 }
 
-.hero h1, .hero h2, .hero h3, .hero p {
-  color: white !important;
+:where(.hero, .alert--primary, th) a:not(.button):hover {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration-color: white;
 }
 
-.hero .hero__title {
-  color: white !important;
-}
+/* ============================================
+   4. COMPONENTS
+   ============================================ */
 
-.hero .hero__subtitle {
-  color: rgba(255, 255, 255, 0.9) !important;
-}
-
-/* BJET Brand Button Styles */
+/* ---------- Buttons ---------- */
 .button {
-  border-radius: 9999px;
-  font-weight: 600;
-  transition: all 0.2s ease;
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--bjet-spacing-sm);
+  
+  /* Spacing */
+  padding: 0.75rem 1.5rem;
+  
+  /* Typography */
+  font-weight: var(--bjet-font-weight-semibold);
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  
+  /* Appearance */
+  border-radius: var(--ifm-button-border-radius);
   box-shadow: var(--ifm-global-shadow-lw);
+  transition: all var(--bjet-transition-fast);
+  cursor: pointer;
+  
+  /* Prevent layout shift */
+  contain: layout style;
 }
 
 .button:hover {
   transform: translateY(-2px);
   box-shadow: var(--ifm-global-shadow-md);
-}
-
-.button--download {
-  background-color: var(--ifm-color-primary);
-  color: white !important;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 9999px;
   text-decoration: none;
-  display: inline-block;
-  margin: 10px 0;
-  font-weight: 600;
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: all 0.2s ease;
 }
 
-.button--download:hover {
-  background-color: var(--ifm-color-primary-dark);
-  color: white !important;
-  text-decoration: none;
-  transform: translateY(-2px);
-  box-shadow: var(--ifm-global-shadow-md);
-}
-
-/* Primary buttons with BJET blue background */
+/* Button Variants using CSS nesting where supported */
 .button--primary {
-  background-color: var(--ifm-color-primary);
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
   border-color: var(--ifm-color-primary);
-  color: white !important;
+  color: white;
 }
 
 .button--primary:hover {
-  background-color: var(--ifm-color-primary-dark);
+  background: linear-gradient(135deg, var(--ifm-color-primary-dark) 0%, var(--ifm-color-primary-darker) 100%);
   border-color: var(--ifm-color-primary-dark);
-  color: white !important;
+  color: white;
 }
 
-/* Code block improvements */
-.prism-code {
-  font-size: 14px;
-  line-height: 1.5;
+.button--secondary {
+  background: linear-gradient(135deg, var(--ifm-color-secondary-light) 0%, var(--ifm-color-secondary-lighter) 100%);
+  border: 1px solid var(--ifm-color-primary-lighter);
+  color: var(--ifm-color-primary);
 }
 
-/* BJET Table styling */
+.button--secondary:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--ifm-color-secondary-lighter) 0%, #c0bcff 100%);
+  border-color: var(--ifm-color-primary);
+  transform: translateY(-2px);
+}
+
+.button--secondary:disabled {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  border-color: #d0d0d0;
+  color: #999;
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+/* Button Sizes */
+.button--lg {
+  padding: 1.25rem 2rem;
+  font-size: 1.125rem;
+}
+
+.button--block {
+  display: flex;
+  width: 100%;
+}
+
+/* Special Postman Button */
+.postman-button {
+  /* Extends button base */
+  composes: button;
+  
+  /* Specific styling */
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  color: white;
+  padding: 1.25rem 2rem;
+  min-width: var(--bjet-button-min-width);
+  margin: var(--bjet-spacing-lg) auto;
+  box-shadow: var(--bjet-shadow-button);
+  
+  /* Center positioning */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.postman-button:hover {
+  background: linear-gradient(135deg, var(--ifm-color-primary-dark) 0%, var(--ifm-color-primary-darker) 100%);
+  color: white;
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: var(--bjet-shadow-button-hover);
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--ifm-card-background);
+  border-radius: var(--ifm-card-border-radius);
+  padding: var(--bjet-spacing-lg);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all var(--bjet-transition-fast);
+  
+  /* Flexbox for consistent height */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  /* Performance optimization */
+  will-change: transform;
+  contain: layout;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: var(--bjet-card-min-height);
+}
+
+.card__body p {
+  margin-block-end: 0.75rem;
+}
+
+.card__body ul {
+  margin-block-start: auto;
+  padding-inline-start: var(--bjet-spacing-lg);
+}
+
+.card__footer {
+  padding-block-start: var(--bjet-spacing-md);
+  margin-block-start: auto;
+}
+
+.card__footer .button {
+  width: 100%;
+}
+
+/* ---------- Tables ---------- */
 table {
   width: 100%;
-  margin: 20px 0;
+  margin-block: var(--bjet-spacing-lg);
   border-radius: var(--ifm-card-border-radius);
   overflow: hidden;
   box-shadow: var(--ifm-global-shadow-lw);
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 th {
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%) !important;
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
   color: white !important;
-  padding: 12px;
-  text-align: left;
-  font-weight: 600;
+  padding: var(--bjet-spacing-md);
+  text-align: start;
+  font-weight: var(--bjet-font-weight-semibold);
+  border-color: var(--ifm-color-primary-dark);
 }
 
-/* Ensure all table header text is white */
-table th,
-table thead th,
-.table th,
-.table thead th {
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%) !important;
+/* Ensure all text in table headers is white */
+th * {
   color: white !important;
-  border-color: var(--ifm-color-primary-dark) !important;
 }
 
 td {
-  padding: 12px;
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding: var(--bjet-spacing-md);
+  border-block-end: 1px solid var(--ifm-color-emphasis-200);
 }
 
 tr:hover {
   background-color: var(--ifm-color-emphasis-100);
 }
 
-/* Alert boxes */
+/* ---------- Alerts ---------- */
+.alert {
+  padding: var(--bjet-spacing-md) var(--bjet-spacing-lg);
+  border-radius: var(--ifm-global-radius);
+  border-inline-start: 4px solid;
+  margin-block: var(--bjet-spacing-md);
+}
+
 .alert--success {
   background-color: #d4edda;
   border-color: #c3e6cb;
@@ -189,140 +363,12 @@ tr:hover {
   color: #721c24;
 }
 
-/* Configuration form styles */
-.config-form {
-  background: var(--ifm-color-emphasis-100);
-  padding: 24px;
-  border-radius: var(--ifm-card-border-radius);
-  margin: 20px 0;
-  box-shadow: var(--ifm-global-shadow-lw);
+/* ---------- Code Blocks ---------- */
+.prism-code {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-.config-form input,
-.config-form select {
-  width: 100%;
-  padding: 10px 12px;
-  margin: 5px 0 15px 0;
-  border: 2px solid var(--ifm-color-emphasis-200);
-  border-radius: var(--ifm-global-radius);
-  transition: border-color 0.2s ease;
-}
-
-.config-form input:focus,
-.config-form select:focus {
-  outline: none;
-  border-color: var(--ifm-color-primary);
-}
-
-/* API endpoint display */
-.api-endpoint {
-  background: var(--ifm-code-background);
-  padding: 12px 16px;
-  border-left: 4px solid var(--ifm-color-primary);
-  border-radius: var(--ifm-global-radius);
-  margin: 15px 0;
-  font-family: var(--ifm-font-family-monospace);
-  box-shadow: var(--ifm-global-shadow-lw);
-}
-
-/* Postman button */
-.postman-button {
-  background-color: #ff6c37;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 9999px;
-  text-decoration: none;
-  display: inline-block;
-  margin: 10px 0;
-  font-weight: 600;
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: all 0.2s ease;
-}
-
-.postman-button:hover {
-  background-color: #e55a2b;
-  color: white;
-  text-decoration: none;
-  transform: translateY(-2px);
-  box-shadow: var(--ifm-global-shadow-md);
-}
-
-/* Version Badge */
-.version-badge {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
-  color: white !important;
-  padding: 4px 12px;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin-left: 8px;
-}
-
-/* Announcement bar - ensure white text on blue background */
-.announcementBar_node_modules-\@docusaurus-theme-classic-lib-theme-AnnouncementBar-Content-styles-module {
-  background-color: var(--ifm-color-primary) !important;
-  color: white !important;
-}
-
-.announcementBar_node_modules-\@docusaurus-theme-classic-lib-theme-AnnouncementBar-Content-styles-module a {
-  color: white !important;
-  text-decoration: underline;
-}
-
-.announcementBar_node_modules-\@docusaurus-theme-classic-lib-theme-AnnouncementBar-Content-styles-module a:hover {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-/* General announcement bar styling */
-div[class*="announcementBar"] {
-  background-color: var(--ifm-color-primary) !important;
-  color: white !important;
-}
-
-div[class*="announcementBar"] a {
-  color: white !important;
-  text-decoration: underline;
-}
-
-div[class*="announcementBar"] a:hover {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-/* Cards and Features */
-.card {
-  background: var(--ifm-card-background);
-  border-radius: var(--ifm-card-border-radius);
-  padding: 1.5rem;
-  box-shadow: var(--ifm-global-shadow-lw);
-  transition: all 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--ifm-global-shadow-md);
-}
-
-/* BJET Professional Headers */
-h1, h2, h3 {
-  font-weight: var(--ifm-heading-font-weight);
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-top: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-  color: var(--ifm-color-primary-darker);
-}
-
-/* Code Blocks with Copy Button */
 .theme-code-block {
   position: relative;
 }
@@ -331,41 +377,168 @@ h3 {
   opacity: 1;
 }
 
-/* Screenshot placeholders */
-.screenshot-placeholder {
-  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
-  border: 2px dashed var(--ifm-color-emphasis-300);
+/* ---------- Forms ---------- */
+.config-form {
+  background: var(--ifm-color-emphasis-100);
+  padding: var(--bjet-spacing-lg);
   border-radius: var(--ifm-card-border-radius);
-  padding: 3rem 2rem;
-  text-align: center;
-  color: var(--ifm-color-emphasis-600);
-  margin: 1.5rem 0;
+  margin-block: var(--bjet-spacing-lg);
+  box-shadow: var(--ifm-global-shadow-lw);
 }
 
-/* Quick Start Steps */
+.config-form input,
+.config-form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-block: 5px 15px;
+  border: var(--bjet-border-width) solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-global-radius);
+  transition: border-color var(--bjet-transition-fast);
+}
+
+.config-form input:focus,
+.config-form select:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+}
+
+/* ============================================
+   5. LAYOUT PATTERNS
+   ============================================ */
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  color: white;
+  padding-block: var(--bjet-spacing-2xl);
+}
+
+.hero :where(h1, h2, h3, p, .hero__title, .hero__subtitle) {
+  color: white;
+}
+
+.hero .hero__subtitle {
+  opacity: 0.9;
+}
+
+/* API Endpoint Display */
+.api-endpoint {
+  background: var(--ifm-code-background);
+  padding: var(--bjet-spacing-md) var(--bjet-spacing-lg);
+  border-inline-start: 4px solid var(--ifm-color-primary);
+  border-radius: var(--ifm-global-radius);
+  margin-block: var(--bjet-spacing-md);
+  font-family: var(--ifm-font-family-monospace);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+/* Screenshot Placeholders */
+.screenshot-placeholder {
+  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+  border: var(--bjet-border-width) dashed var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-card-border-radius);
+  padding: var(--bjet-spacing-2xl) var(--bjet-spacing-xl);
+  text-align: center;
+  color: var(--ifm-color-emphasis-600);
+  margin-block: var(--bjet-spacing-lg);
+}
+
+/* Steps Pattern */
 .steps {
   counter-reset: step-counter;
 }
 
 .step {
   position: relative;
-  padding-left: 3rem;
-  margin-bottom: 2rem;
+  padding-inline-start: var(--bjet-spacing-2xl);
+  margin-block-end: var(--bjet-spacing-xl);
   counter-increment: step-counter;
 }
 
 .step::before {
   content: counter(step-counter);
   position: absolute;
-  left: 0;
-  top: 0;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  
+  /* Circle styling */
   background: var(--ifm-color-primary);
   color: white;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
+  /* Center content */
+  display: grid;
+  place-items: center;
   font-weight: bold;
+}
+
+/* ============================================
+   6. UTILITIES
+   ============================================ */
+
+/* Version Badge */
+.version-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  color: white;
+  padding: var(--bjet-spacing-xs) var(--bjet-spacing-md);
+  border-radius: var(--ifm-button-border-radius);
+  font-size: 0.875rem;
+  font-weight: var(--bjet-font-weight-semibold);
+  margin-inline-start: var(--bjet-spacing-sm);
+}
+
+/* Announcement Bar */
+:where(div[class*="announcementBar"]) {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+:where(div[class*="announcementBar"]) a {
+  color: white;
+  text-decoration: underline;
+}
+
+:where(div[class*="announcementBar"]) a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================
+   7. DARK MODE OVERRIDES
+   ============================================ */
+[data-theme='dark'] {
+  --ifm-color-primary: #70A9FF;
+  --ifm-color-primary-dark: #4c93ff;
+  --ifm-color-primary-darker: #3987ff;
+  --ifm-color-primary-darkest: #0066ff;
+  --ifm-color-primary-light: #94bfff;
+  --ifm-color-primary-lighter: #a7cbff;
+  --ifm-color-primary-lightest: #deecff;
+  
+  --ifm-background-color: #1a1a1a;
+  --ifm-navbar-background-color: #242424;
+  --docusaurus-highlighted-code-line-bg: rgba(112, 169, 255, 0.15);
+  
+  /* Adjust shadows for dark mode */
+  --ifm-global-shadow-lw: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  --ifm-global-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --bjet-shadow-button: 0 4px 6px rgba(112, 169, 255, 0.2);
+  --bjet-shadow-button-hover: 0 8px 12px rgba(112, 169, 255, 0.3);
+}
+
+/* Dark mode specific component adjustments */
+[data-theme='dark'] .card {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+}
+
+[data-theme='dark'] .config-form {
+  background: #2a2a2a;
+}
+
+[data-theme='dark'] .api-endpoint {
+  background: #2a2a2a;
+  border-inline-start-color: var(--ifm-color-primary);
 }

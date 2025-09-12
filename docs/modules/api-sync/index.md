@@ -55,6 +55,16 @@ The API Synchronization Module is a comprehensive solution that enables seamless
 - **Performance Settings** – Configurable timeouts
 - **Debug Support** – Comprehensive troubleshooting logs
 
+import Link from '@docusaurus/Link';
+
+<div style={{textAlign: 'center', margin: '2rem 0'}}>
+  <Link
+    className="button button--primary button--lg"
+    to="/docs/modules/api-sync/quick-start">
+    🚀 Quick Start Guide
+  </Link>
+</div>
+
 ## Quick Start Guide
 
 ### Step 1: Access Configuration
@@ -132,13 +142,13 @@ For inbound configurations, endpoints follow this pattern:
 
 ## Documentation Sections
 
-📚 **[Configuration Guide](./configuration/overview)**  
+📚 **[Configuration Guide](/docs/modules/api-sync/configuration/overview)**  
 Step-by-step guides for setting up inbound and outbound APIs
 
-🐍 **[Python Scripts](./python-scripts/context-variables)**  
+🐍 **[Python Scripts](/docs/modules/api-sync/python-scripts/context-variables)**  
 Reference for data transformation scripts and available context variables
 
-❓ **[Troubleshooting](./troubleshooting)**  
+❓ **[Troubleshooting](/docs/modules/api-sync/troubleshooting)**  
 Common issues, solutions, and best practices
 
 📮 **[Postman Collection](/postman)**  
@@ -159,4 +169,20 @@ Download pre-configured API testing collection
 
 ---
 
-*For detailed configuration instructions, please refer to the [Configuration Guide](./configuration/overview).*
+<div style={{textAlign: 'center', margin: '3rem 0'}}>
+  <Link
+    className="button button--primary button--lg"
+    to="/docs/modules/api-sync/quick-start"
+    style={{marginRight: '1rem'}}>
+    🚀 Get Started with Quick Start Guide
+  </Link>
+  <Link
+    className="button button--secondary button--lg"
+    to="/docs/modules/api-sync/configuration/overview">
+    📚 View Configuration Guide
+  </Link>
+</div>
+
+---
+
+*For detailed configuration instructions, please refer to the [Configuration Guide](/docs/modules/api-sync/configuration/overview).*

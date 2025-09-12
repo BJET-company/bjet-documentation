@@ -230,6 +230,6 @@ HTTP Request → Authentication → Method Check → Configuration Lookup
 
 ## Next Steps
 
-- [Configure Headers and Parameters](/docs/configuration/authentication)
-- [Set Up Field Mapping](/docs/configuration/field-mapping)
-- [Add Python Transformations](/docs/python-scripts/data-transformation)
+- [Configure Headers and Parameters](/docs/modules/api-sync/configuration/headers-parameters)
+- [Set Up Field Mapping](/docs/modules/api-sync/configuration/field-mapping)
+- [Add Python Transformations](/docs/modules/api-sync/python-scripts/data-transformation)

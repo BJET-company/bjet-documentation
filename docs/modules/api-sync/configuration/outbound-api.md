@@ -293,6 +293,6 @@ The module provides automatic error handling:
 
 ## Next Steps
 
-- [Set Up Automation](/docs/automation/base-automation)
-- [Configure Python Scripts](/docs/python-scripts/data-transformation)
-- [Monitor API Logs](/docs/troubleshooting)
+- [Set Up Automation](/docs/modules/api-sync/automation/base-automation)
+- [Configure Python Scripts](/docs/modules/api-sync/python-scripts/data-transformation)
+- [Monitor API Logs](/docs/modules/api-sync/troubleshooting)

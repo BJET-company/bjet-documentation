@@ -283,6 +283,6 @@ for field in sensitive_fields:
 ## Related Documentation
 
 - [Base Automation](base-automation)
-- [Scheduled Actions](scheduled-actions)
-- [Trigger Configuration](../configuration/triggers)
-- [API Logging](../api-reference/logging)
+- [API Configuration](../configuration/overview)
+- [Field Mapping](../configuration/field-mapping)
+- [Troubleshooting](../troubleshooting)

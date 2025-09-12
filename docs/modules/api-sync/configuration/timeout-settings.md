@@ -138,4 +138,4 @@ for attempt in range(max_retries):
 
 - [Performance Optimization](../performance-optimization)
 - [Troubleshooting](../troubleshooting)
-- [Error Handling](../api-reference/error-codes)
+- [API Reference](../api-reference/)

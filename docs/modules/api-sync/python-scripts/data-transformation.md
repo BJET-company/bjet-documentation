@@ -345,6 +345,6 @@ for test_data in test_cases:
 ## Related Documentation
 
 - [Context Variables Reference](context-variables)
-- [Script Examples](examples)
+- [API Configuration](../configuration/overview)
 - [Error Handling](../troubleshooting)
 - [Performance Optimization](../performance-optimization)

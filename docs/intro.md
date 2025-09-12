@@ -10,25 +10,77 @@ Welcome to the comprehensive documentation hub for BJET's Odoo modules. This kno
 
 ## Available Modules
 
-### 📦 [API Synchronization Module](/docs/modules/api-sync)
-**Version:** 18.0.1.0.2  
-**License:** OPL-1
+import Link from '@docusaurus/Link';
 
-A comprehensive and flexible module that synchronizes Odoo models with external APIs, enabling seamless bidirectional data integration through RESTful interfaces.
-
-**Key Features:**
-- Bidirectional synchronization (Inbound/Outbound)
-- Multiple authentication methods
-- Python script transformations
-- Real-time and scheduled operations
-
-[Get Started with API Sync →](/docs/modules/api-sync)
-
----
-
-### 🔜 More Modules Coming Soon
-
-Additional BJET Odoo modules will be added to this documentation hub as they become available.
+<div className="row margin-bottom--lg">
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>📦 API Synchronization</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Version:</strong> 18.0.1.0.2</p>
+        <p>Synchronize Odoo models with external APIs through RESTful interfaces.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Bidirectional sync</li>
+          <li>Multiple auth methods</li>
+          <li>Python transformations</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/api-sync">
+          View Documentation
+        </Link>
+      </div>
+    </div>
+  </div>
+  
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>🚀 Module Two</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Version:</strong> Coming Soon</p>
+        <p>Enhanced functionality for your Odoo instance with advanced features.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Feature preview</li>
+          <li>Advanced capabilities</li>
+          <li>Enterprise ready</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <button className="button button--secondary button--block" disabled>
+          Coming Soon
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>📊 Module Three</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Version:</strong> In Development</p>
+        <p>Comprehensive reporting and analytics module for data-driven decisions.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Real-time analytics</li>
+          <li>Custom dashboards</li>
+          <li>Export capabilities</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <button className="button button--secondary button--block" disabled>
+          In Development
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Quick Links
 
