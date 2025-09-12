@@ -23,6 +23,22 @@
     "message": "Посібник з конфігурації",
     "description": "The label of footer link with label=Configuration Guide linking to /docs/modules/api-sync/configuration/overview"
   },
+  "link.item.label.Inbound API": {
+    "message": "Вхідний API",
+    "description": "The label of footer link with label=Inbound API linking to /docs/modules/api-sync/configuration/inbound-api"
+  },
+  "link.item.label.Outbound API": {
+    "message": "Вихідний API",
+    "description": "The label of footer link with label=Outbound API linking to /docs/modules/api-sync/configuration/outbound-api"
+  },
+  "link.item.label.Base Automation": {
+    "message": "Базова автоматизація",
+    "description": "The label of footer link with label=Base Automation linking to /docs/modules/api-sync/automation/base-automation"
+  },
+  "link.item.label.API Reference": {
+    "message": "Довідник API",
+    "description": "The label of footer link with label=API Reference linking to /docs/modules/api-sync/api-reference"
+  },
   "link.item.label.Postman Collection": {
     "message": "Колекція Postman",
     "description": "The label of footer link with label=Postman Collection linking to /postman"
