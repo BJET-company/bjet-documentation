@@ -144,11 +144,21 @@ table {
 }
 
 th {
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%) !important;
+  color: white !important;
   padding: 12px;
   text-align: left;
   font-weight: 600;
+}
+
+/* Ensure all table header text is white */
+table th,
+table thead th,
+.table th,
+.table thead th {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%) !important;
+  color: white !important;
+  border-color: var(--ifm-color-primary-dark) !important;
 }
 
 td {
