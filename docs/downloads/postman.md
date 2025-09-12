@@ -1,5 +1,7 @@
 ---
+id: postman
 title: Postman Collection
+sidebar_label: Postman Collection
 description: Download the BJET API Synchronization Module Postman collection
 ---
 

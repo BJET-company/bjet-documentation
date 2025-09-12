@@ -147,7 +147,7 @@ const config = {
             ],
           },
           {
-            href: '/postman',
+            to: '/docs/downloads/postman',
             label: 'Downloads',
             position: 'left',
           },
@@ -192,7 +192,7 @@ const config = {
             items: [
               {
                 label: 'Postman Collection',
-                href: '/postman',
+                to: '/docs/downloads/postman',
               },
               {
                 label: 'Python Scripts',
