@@ -1,0 +1,34 @@
+{
+  "title": {
+    "message": "BJET Odoo Модулі",
+    "description": "The title in the navbar"
+  },
+  "item.label.Documentation": {
+    "message": "Документація",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.Modules": {
+    "message": "Модулі",
+    "description": "Navbar item with label Modules"
+  },
+  "item.label.Downloads": {
+    "message": "Завантаження",
+    "description": "Navbar item with label Downloads"
+  },
+  "item.label.BJET Website": {
+    "message": "Веб-сайт BJET",
+    "description": "Navbar item with label BJET Website"
+  },
+  "item.label.Support": {
+    "message": "Підтримка",
+    "description": "Navbar item with label Support"
+  },
+  "item.label.API Synchronization": {
+    "message": "API Синхронізація",
+    "description": "Navbar item with label API Synchronization"
+  },
+  "logo.alt": {
+    "message": "BJET Logo",
+    "description": "The alt text of navbar logo"
+  }
+}

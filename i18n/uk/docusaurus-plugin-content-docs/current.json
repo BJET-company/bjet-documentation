@@ -1,0 +1,46 @@
+{
+  "version.label": {
+    "message": "Поточна версія",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.doc.Welcome": {
+    "message": "Ласкаво просимо",
+    "description": "The label for the doc item Welcome in sidebar tutorialSidebar, linking to the doc intro"
+  },
+  "sidebar.tutorialSidebar.category.Modules": {
+    "message": "Модулі",
+    "description": "The label for category Modules in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Modules.link.generated-index.title": {
+    "message": "BJET Odoo Модулі",
+    "description": "The generated-index page title for category Modules in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Modules.link.generated-index.description": {
+    "message": "Документація для всіх BJET Odoo модулів",
+    "description": "The generated-index page description for category Modules in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.API Synchronization Module": {
+    "message": "Модуль API Синхронізації",
+    "description": "The label for category API Synchronization Module in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.doc.Quick Start Guide": {
+    "message": "Посібник швидкого старту",
+    "description": "The label for the sidebar doc Quick Start Guide"
+  },
+  "sidebar.tutorialSidebar.category.Configuration": {
+    "message": "Конфігурація",
+    "description": "The label for category Configuration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Automation": {
+    "message": "Автоматизація",
+    "description": "The label for category Automation in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.API Reference": {
+    "message": "Довідник API",
+    "description": "The label for category API Reference in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Python Scripts": {
+    "message": "Python Скрипти",
+    "description": "The label for category Python Scripts in sidebar tutorialSidebar"
+  }
+}

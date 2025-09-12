@@ -1,0 +1,50 @@
+{
+  "link.title.Documentation": {
+    "message": "Документація",
+    "description": "The title of the footer links column with title=Documentation in the footer"
+  },
+  "link.title.Resources": {
+    "message": "Ресурси",
+    "description": "The title of the footer links column with title=Resources in the footer"
+  },
+  "link.title.Support": {
+    "message": "Підтримка",
+    "description": "The title of the footer links column with title=Support in the footer"
+  },
+  "link.item.label.All Modules": {
+    "message": "Всі модулі",
+    "description": "The label of footer link with label=All Modules linking to /docs/"
+  },
+  "link.item.label.API Sync Module": {
+    "message": "Модуль API Sync",
+    "description": "The label of footer link with label=API Sync Module linking to /docs/modules/api-sync"
+  },
+  "link.item.label.Configuration Guide": {
+    "message": "Посібник з конфігурації",
+    "description": "The label of footer link with label=Configuration Guide linking to /docs/modules/api-sync/configuration/overview"
+  },
+  "link.item.label.Postman Collection": {
+    "message": "Колекція Postman",
+    "description": "The label of footer link with label=Postman Collection linking to /postman"
+  },
+  "link.item.label.Python Scripts": {
+    "message": "Python скрипти",
+    "description": "The label of footer link with label=Python Scripts linking to /docs/modules/api-sync/python-scripts/context-variables"
+  },
+  "link.item.label.Troubleshooting": {
+    "message": "Усунення несправностей",
+    "description": "The label of footer link with label=Troubleshooting linking to /docs/modules/api-sync/troubleshooting"
+  },
+  "link.item.label.BJET Website": {
+    "message": "Веб-сайт BJET",
+    "description": "The label of footer link with label=BJET Website linking to https://bjetpro.com"
+  },
+  "link.item.label.Email Support": {
+    "message": "Підтримка електронною поштою",
+    "description": "The label of footer link with label=Email Support linking to mailto:support@bjetpro.com"
+  },
+  "copyright": {
+    "message": "Авторські права © 2025 BJET. Документація для модулів Odoo 18.0",
+    "description": "The footer copyright"
+  }
+}

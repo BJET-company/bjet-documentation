@@ -30,7 +30,20 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'uk'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+      },
+      uk: {
+        label: 'Українська',
+        direction: 'ltr',
+        htmlLang: 'uk-UA',
+        path: 'uk',
+      },
+    },
   },
 
   presets: [
@@ -98,8 +111,7 @@ const config = {
         title: 'BJET Odoo Modules',
         logo: {
           alt: 'BJET Logo',
-          src: 'img/logo.svg',
-          href: '/bjet-documentation/docs/',
+          src: 'img/bjet-logo.png',
         },
         items: [
           {
@@ -133,6 +145,10 @@ const config = {
           {
             href: 'mailto:support@bjetpro.com',
             label: 'Support',
+            position: 'right',
+          },
+          {
+            type: 'localeDropdown',
             position: 'right',
           },
         ],
