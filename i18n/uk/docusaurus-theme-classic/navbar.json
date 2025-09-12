@@ -27,6 +27,10 @@
     "message": "API Синхронізація",
     "description": "Navbar item with label API Synchronization"
   },
+  "item.label.Postman Collection": {
+    "message": "Колекція Postman",
+    "description": "Navbar item with label Postman Collection"
+  },
   "logo.alt": {
     "message": "BJET Logo",
     "description": "The alt text of navbar logo"
