@@ -206,8 +206,7 @@ for i in range(0, len(record_ids), batch_size):
 
 ### Logging and Monitoring
 
-![API Log Viewer](/img/api-sync/api-log-viewer.png)
-*Monitor synchronization logs*
+*API Log Viewer - Monitor synchronization logs in Settings > Technical > BJ API > Logs*
 
 Track all synchronization activities:
 

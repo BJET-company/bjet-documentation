@@ -59,23 +59,19 @@ const config = {
   ],
 
   themes: [
-    // Add mermaid theme for diagrams
     '@docusaurus/theme-mermaid',
-    // Add the local search theme - temporarily disabled due to Node.js 18 compatibility issues
-    // Will be replaced with alternative search solution
-    // [
-    //   require.resolve("@easyops-cn/docusaurus-search-local"),
-    //   /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-    //   ({
-    //     hashed: true,
-    //     language: ["en"],
-    //     indexDocs: true,
-    //     indexBlog: false,
-    //     docsRouteBasePath: "/docs",
-    //     highlightSearchTermsOnTargetPage: true,
-    //     explicitSearchResultPath: true,
-    //   }),
-    // ],
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["en"],
+        indexDocs: true,
+        indexBlog: false,
+        docsRouteBasePath: "/docs",
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
   ],
   
   markdown: {
@@ -200,27 +196,6 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
         additionalLanguages: ['python', 'bash', 'json'],
-      },
-      algolia: {
-        // The application ID provided by Algolia
-        appId: 'YOUR_APP_ID', // Replace with your Algolia app ID
-        
-        // Public API key: it is safe to commit it
-        apiKey: 'YOUR_SEARCH_API_KEY', // Replace with your Algolia search API key
-        
-        indexName: 'bjet-documentation', // Replace with your Algolia index name
-        
-        // Optional: see doc section below
-        contextualSearch: true,
-        
-        // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'search',
-        
-        // Optional: Replace parts of the item URLs from Algolia
-        replaceSearchResultPathname: {
-          from: '/docs/',
-          to: '/bjet-documentation/docs/',
-        },
       },
     }),
 };

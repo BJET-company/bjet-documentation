@@ -20,9 +20,13 @@ npm run serve -- --port 3002  # Serve on custom port
 ```bash
 npm run build       # Build static site to ./build directory
 npm run clear       # Clear cache and temp files
+npm run deploy      # Deploy to GitHub Pages (when configured)
+npm run swizzle     # Customize Docusaurus components
+npm run write-translations  # Extract translatable strings
+npm run write-heading-ids   # Auto-generate heading IDs
 ```
 
-The site auto-deploys to GitHub Pages via GitHub Actions when pushing to main branch.
+The site auto-deploys to GitHub Pages via GitHub Actions when pushing to main branch. Node.js 18+ is required.
 
 ## Architecture & Structure
 
@@ -34,9 +38,15 @@ The site is structured to support multiple Odoo modules:
 
 ### Configuration Files
 - `docusaurus.config.js` - Main configuration (site metadata, navbar, footer, themes)
-- `sidebars.js` - Sidebar navigation structure
-- `src/css/custom.css` - Custom styling
-- `.github/workflows/deploy.yml` - GitHub Pages deployment workflow
+- `sidebars.js` - Sidebar navigation structure for all modules
+- `src/css/custom.css` - Custom styling and CSS variables
+- `.github/workflows/deploy.yml` - GitHub Pages deployment workflow with Node.js 18
+
+### Key Dependencies
+- **Docusaurus 3.6.3** - Static site generator
+- **@docusaurus/theme-mermaid** - Diagram support
+- **@easyops-cn/docusaurus-search-local v0.52.1** - Local search (enabled)
+- **React 18** - Frontend framework
 
 ### Important Paths
 ```
@@ -65,16 +75,21 @@ To add a new Odoo module to the documentation:
 
 1. Create directory structure: `docs/modules/[new-module-name]/`
 2. Add module overview at `docs/modules/[new-module-name]/index.md`
-3. Update `sidebars.js` to include the new module in navigation
-4. Add module to dropdown in `docusaurus.config.js` navbar items
+3. Update `sidebars.js` to include the new module in the `tutorialSidebar` array
+4. Add module to dropdown in `docusaurus.config.js` navbar items (lines 121-127)
 5. Update landing page `docs/intro.md` to list the new module
+6. Follow the standard module documentation pattern (see below)
 
 ## Deployment Configuration
 
-Before deploying, update these placeholders in `docusaurus.config.js`:
-- Line 16: Replace `your-github-username` with actual GitHub username
-- Line 22: Replace `your-github-username` with actual GitHub username  
-- Line 45: Update edit URL with correct GitHub repository
+The site is configured for GitHub Pages deployment with:
+- **Organization**: bjet (line 22 in docusaurus.config.js)
+- **Repository**: bjet-documentation (line 23)
+- **Base URL**: /bjet-documentation/ (line 19)
+- **GitHub Actions**: Automatically deploys on push to main branch
+- **Edit URLs**: Point to the correct GitHub repository (line 45)
+
+**Local Search**: @easyops-cn/docusaurus-search-local is configured and working
 
 ## Module Documentation Pattern
 
@@ -88,11 +103,19 @@ Each module should follow this structure:
 
 Postman collections are stored in `static/postman/` and linked from the `/postman` page. Each module can have its own collection.
 
-## Known Issues
+## Development Notes
 
+### Known Issues
 - Some internal documentation links may show warnings during build but site still functions
-- The `onBrokenLinks` is set to 'warn' to allow builds with broken links
+- The `onBrokenLinks` is set to 'warn' to allow builds with broken links (line 25 in docusaurus.config.js)
 - Images should be placed in `static/img/` directory
+
+### Special Features
+- **Local Search**: @easyops-cn/docusaurus-search-local enabled for offline search
+- **Mermaid Diagrams**: Enabled for creating flowcharts and diagrams
+- **Syntax Highlighting**: Support for Python, Bash, and JSON
+- **Announcement Bar**: Configurable module version notifications (lines 95-102)
+- **Color Mode**: Light/dark theme with user preference detection
 
 ## Context
 

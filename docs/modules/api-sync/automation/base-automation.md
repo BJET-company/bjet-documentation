@@ -32,7 +32,6 @@ Base automation allows you to:
 
 Navigate to: **Settings → Technical → Automation → Automation Rules**
 
-![Base Automation Configuration](/img/api-sync/base-automation-config.png)
 *Base Automation configuration interface*
 
 #### 2. Create New Rule

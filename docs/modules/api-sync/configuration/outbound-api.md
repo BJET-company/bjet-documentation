@@ -161,7 +161,6 @@ config._make_outbound_http_request(record, config.id, timeout=60)
 
 #### Cron Jobs
 
-![Cron Job Configuration](/img/api-sync/cron-job-config.png)
 *Schedule automated synchronization*
 
 Schedule regular synchronization:
