@@ -92,6 +92,20 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // SEO and security meta tags
+      metadata: [
+        {name: 'keywords', content: 'Odoo, API, synchronization, integration, BJET, documentation, RESTful'},
+        {name: 'author', content: 'BJET'},
+        {name: 'robots', content: 'index, follow'},
+        {name: 'googlebot', content: 'index, follow'},
+        {name: 'description', content: 'Comprehensive documentation for BJET Odoo Modules including API Synchronization'},
+        // Security headers via meta tags
+        {'http-equiv': 'X-Content-Type-Options', content: 'nosniff'},
+        {'http-equiv': 'X-Frame-Options', content: 'SAMEORIGIN'},
+        {'http-equiv': 'X-XSS-Protection', content: '1; mode=block'},
+        {'http-equiv': 'Referrer-Policy', content: 'strict-origin-when-cross-origin'},
+        {'http-equiv': 'Permissions-Policy', content: 'geolocation=(), microphone=(), camera=()'},
+      ],
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
