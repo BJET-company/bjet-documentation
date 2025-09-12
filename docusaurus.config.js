@@ -61,20 +61,21 @@ const config = {
   themes: [
     // Add mermaid theme for diagrams
     '@docusaurus/theme-mermaid',
-    // Add the local search theme
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      ({
-        hashed: true,
-        language: ["en"],
-        indexDocs: true,
-        indexBlog: false,
-        docsRouteBasePath: "/docs",
-        highlightSearchTermsOnTargetPage: true,
-        explicitSearchResultPath: true,
-      }),
-    ],
+    // Add the local search theme - temporarily disabled due to Node.js 18 compatibility issues
+    // Will be replaced with alternative search solution
+    // [
+    //   require.resolve("@easyops-cn/docusaurus-search-local"),
+    //   /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+    //   ({
+    //     hashed: true,
+    //     language: ["en"],
+    //     indexDocs: true,
+    //     indexBlog: false,
+    //     docsRouteBasePath: "/docs",
+    //     highlightSearchTermsOnTargetPage: true,
+    //     explicitSearchResultPath: true,
+    //   }),
+    // ],
   ],
   
   markdown: {
@@ -104,7 +105,7 @@ const config = {
         logo: {
           alt: 'BJET Logo',
           src: 'img/logo.svg',
-          href: '/bjet-documentation/',
+          href: '/bjet-documentation/docs/',
         },
         items: [
           {
