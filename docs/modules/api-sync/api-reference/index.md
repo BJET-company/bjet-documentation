@@ -23,6 +23,7 @@ https://your-odoo-instance.com/bj_api_sync/v1/
 ### Core Endpoints
 
 - **GET** `/[endpoint]` - Retrieve records
+- **GET** `/[endpoint]/{id}` - Retrieve a single record by ID
 - **POST** `/[endpoint]` - Create new records
 - **PUT** `/[endpoint]/{id}` - Update existing records
 - **DELETE** `/[endpoint]/{id}` - Delete records
@@ -65,23 +66,21 @@ X-API-Version: 1.0
 ### Success Response
 ```json
 {
-  "success": true,
-  "data": {
     // Response data
-  },
-  "message": "Operation successful"
 }
 ```
 
 ### Error Response
 ```json
 {
-  "success": false,
-  "error": {
-    "code": "ERROR_CODE",
-    "message": "Error description",
-    "details": {}
-  }
+    "error": "Error description",
+    "line_id": "Config line where error except",
+    "status_code": "ERROR_CODE"
+}
+```
+```json
+{
+    "message": "Error description"
 }
 ```
 
@@ -100,9 +99,12 @@ X-API-Version: 1.0
 
 ## Rate Limiting
 
-Default rate limits:
-- 100 requests per minute per IP
-- 1000 requests per hour per API key
+Odoo does not provide built-in API rate limiting.  
+It is strongly recommended to configure rate limiting at the reverse proxy (e.g., Nginx, HAProxy, or Cloudflare) or firewall level, especially for on-premise VM deployments.
+
+Suggested defaults:
+- **100 requests per minute per IP**
+- **1000 requests per hour per API key**
 
 ## Pagination
 
@@ -113,14 +115,17 @@ GET /[endpoint]?limit=100&offset=0
 ```
 
 ### Parameters
-- `limit`: Number of records to return (default: 80, max: 200)
+- `limit`: Number of records to return (default: 100)
 - `offset`: Number of records to skip (default: 0)
 
 ## Filtering
 
 Use domain syntax for filtering:
 ```http
-GET /[endpoint]?domain=[["active","=",true]]
+GET /[endpoint]?active=true
+```
+```http
+GET /[endpoint]?active=true&state=draft
 ```
 
 ## Detailed Documentation
