@@ -1,4 +1,4 @@
----
+from operator import index---
 id: base-automation
 title: Base Automation Configuration
 sidebar_label: Base Automation
@@ -71,13 +71,8 @@ Trigger: On Creation
 Action: Execute Python Code
 
 # Python Code
-if record.customer_rank > 0:
-    api_config = env['api.sync.config'].search([
-        ('model_name', '=', 'res.partner'),
-        ('active', '=', True)
-    ], limit=1)
-    if api_config:
-        api_config.sync_record(record, 'create')
+# config_index - should be replaced to your API Configuration index 
+env['bj.api.sync.config']._make_outbound_http_request(record_ids=records, config_id_ref=config_index)
 ```
 
 ### On Update
@@ -92,14 +87,8 @@ Trigger: On Update
 Watch Fields: ['name', 'email', 'phone', 'street']
 
 # Python Code
-if record.customer_rank > 0:
-    changed_fields = []
-    for field in ['name', 'email', 'phone', 'street']:
-        if getattr(record, field) != getattr(old_values, field):
-            changed_fields.append(field)
-    
-    if changed_fields:
-        api_config.sync_record(record, 'update', changed_fields)
+# config_index - should be replaced to your API Configuration index 
+env['bj.api.sync.config']._make_outbound_http_request(record_ids=records, config_id_ref=config_index)
 ```
 
 ### On Deletion
@@ -113,14 +102,8 @@ Model: res.partner
 Trigger: On Deletion
 
 # Python Code
-api_config = env['api.sync.config'].search([
-    ('model_name', '=', 'res.partner'),
-    ('active', '=', True)
-], limit=1)
-
-if api_config:
-    # Send deletion notification
-    api_config.send_deletion_notice(record.id, record.name)
+# config_index - should be replaced to your API Configuration index 
+env['bj.api.sync.config']._make_outbound_http_request(record_ids=records, config_id_ref=config_index)
 ```
 
 ### Scheduled Actions
@@ -145,12 +128,9 @@ def run_daily_sync():
         ('customer_rank', '>', 0)
     ])
     
-    api_config = env['api.sync.config'].search([
-        ('model_name', '=', 'res.partner')
-    ], limit=1)
     
-    for customer in customers:
-        api_config.sync_record(customer, 'update')
+    # config_index - should be replaced to your API Configuration index 
+    env['bj.api.sync.config']._make_outbound_http_request(record_ids=customers, config_id_ref=config_index)
 ```
 
 ## Advanced Automation Patterns
@@ -175,7 +155,8 @@ def should_sync_customer(record):
 
 # In automation rule
 if should_sync_customer(record):
-    api_config.sync_record(record, 'update')
+    # config_index - should be replaced to your API Configuration index 
+    env['bj.api.sync.config']._make_outbound_http_request(record_ids=record, config_id_ref=config_index)
 ```
 
 ### Batch Processing
@@ -193,20 +174,8 @@ def batch_sync_customers():
     ], limit=batch_size)
     
     if customers:
-        api_config = env['api.sync.config'].search([
-            ('model_name', '=', 'res.partner')
-        ], limit=1)
-        
-        # Prepare batch data
-        batch_data = []
-        for customer in customers:
-            batch_data.append({
-                'id': customer.id,
-                'data': api_config.prepare_outbound_data(customer)
-            })
-        
-        # Send batch
-        response = api_config.send_batch(batch_data)
+        # config_index - should be replaced to your API Configuration index 
+        response = env['bj.api.sync.config']._make_outbound_http_request(record_ids=customers, config_id_ref=config_index)
         
         # Update sync status
         if response.get('success'):
@@ -223,11 +192,9 @@ def sync_with_retry(record, max_retries=3):
     
     for attempt in range(max_retries):
         try:
-            api_config = env['api.sync.config'].search([
-                ('model_name', '=', record._name)
-            ], limit=1)
-            
-            result = api_config.sync_record(record, 'update')
+
+            # config_index - should be replaced to your API Configuration index 
+            result = env['bj.api.sync.config']._make_outbound_http_request(record_ids=record, config_id_ref=config_index)
             
             if result.get('success'):
                 record.write({
@@ -295,7 +262,8 @@ def sync_enriched_customer(record):
     if record.enrichment_status != 'enriched':
         return False
     
-    api_config.sync_record(record, 'create')
+    # config_index - should be replaced to your API Configuration index 
+    env['bj.api.sync.config']._make_outbound_http_request(record_ids=record, config_id_ref=config_index)
     record.write({'workflow_status': 'completed'})
 ```
 
@@ -312,27 +280,8 @@ Watch Fields: ['state']
 
 # Python Code
 if record.state == 'sale' and old_values.get('state') != 'sale':
-    # Order confirmed - sync to external system
-    api_config = env['api.sync.config'].search([
-        ('model_name', '=', 'sale.order')
-    ], limit=1)
-    
-    order_data = {
-        'order_number': record.name,
-        'customer': record.partner_id.name,
-        'total': record.amount_total,
-        'status': 'confirmed',
-        'lines': [
-            {
-                'product': line.product_id.name,
-                'quantity': line.product_uom_qty,
-                'price': line.price_unit
-            }
-            for line in record.order_line
-        ]
-    }
-    
-    api_config.send_outbound(order_data)
+    # config_index - should be replaced to your API Configuration index 
+    env['bj.api.sync.config']._make_outbound_http_request(record_ids=record.order_line, config_id_ref=config_index)
 ```
 
 ## Performance Optimization
@@ -351,44 +300,17 @@ def async_sync_record(record_id, model_name, operation):
     env = api.Environment(cr, uid, context)
     record = env[model_name].browse(record_id)
     
-    api_config = env['api.sync.config'].search([
+    api_config = env['bj.api.sync.config'].search([
         ('model_name', '=', model_name)
     ], limit=1)
     
-    return api_config.sync_record(record, operation)
+    return api_config._make_outbound_http_request(record)
 
 # In automation rule
 record.with_delay().async_sync_record(
     record.id, 
     record._name, 
-    'update'
 )
-```
-
-### Bulk Operations
-
-Optimize for multiple records:
-
-```python
-def bulk_sync_optimization():
-    """Optimize synchronization for bulk operations"""
-    
-    # Collect records to sync
-    records_to_sync = env['res.partner'].search([
-        ('sync_pending', '=', True)
-    ])
-    
-    if len(records_to_sync) > 10:
-        # Use bulk endpoint
-        bulk_data = [
-            api_config.prepare_outbound_data(r)
-            for r in records_to_sync
-        ]
-        api_config.send_bulk(bulk_data)
-    else:
-        # Individual sync for small batches
-        for record in records_to_sync:
-            api_config.sync_record(record, 'update')
 ```
 
 ## Monitoring and Logging
@@ -416,37 +338,6 @@ def log_automation_activity(record, action, result):
         'last_sync': fields.Datetime.now(),
         'sync_count': record.sync_count + 1
     })
-```
-
-### Performance Metrics
-
-Track synchronization performance:
-
-```python
-import time
-
-def track_sync_performance(func):
-    """Decorator to track sync performance"""
-    
-    def wrapper(record, *args, **kwargs):
-        start_time = time.time()
-        
-        result = func(record, *args, **kwargs)
-        
-        duration = time.time() - start_time
-        
-        # Log performance
-        env['api.performance.log'].create({
-            'model': record._name,
-            'record_id': record.id,
-            'operation': func.__name__,
-            'duration': duration,
-            'timestamp': fields.Datetime.now()
-        })
-        
-        return result
-    
-    return wrapper
 ```
 
 ## Troubleshooting Automation
