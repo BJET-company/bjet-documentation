@@ -33,6 +33,8 @@ Add the synchronization code:
 config = env['bj.api.sync.config'].search([
     ('name', '=', 'Customer Export API')
 ], limit=1)
+# OR use config_index - should be replaced to your API Configuration index 
+# env['bj.api.sync.config']._make_outbound_http_request(record_ids=record.order_line, config_id_ref=config_index)
 
 if config:
     # For selected records (if triggered from list view)
