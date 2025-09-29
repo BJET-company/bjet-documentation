@@ -223,37 +223,6 @@ Request URL: https://orders.api.com/remove
 Filter Domain: [('state', '=', 'cancel')]
 ```
 
-## Python Script for Complex Transformations
-
-Use Python scripts when simple field mapping isn't enough:
-
-```python
-# Available variables:
-# env - Odoo environment
-# model - Current model
-# records - Records being processed
-# request_data - Data being sent
-
-# Example: Format phone number
-phone = records.phone or ''
-if phone.startswith('+'):
-    result = phone
-else:
-    result = '+1' + phone.replace('-', '').replace(' ', '')
-
-# Example: Calculate total value
-total = sum(records.mapped('amount_total'))
-result = {'total_revenue': total, 'order_count': len(records)}
-
-# Example: Add timestamp
-from datetime import datetime
-result = {
-    'data': request_data,
-    'timestamp': datetime.now().isoformat(),
-    'source': 'odoo'
-}
-```
-
 ## Batch Processing
 
 For large datasets, configure batch processing:
