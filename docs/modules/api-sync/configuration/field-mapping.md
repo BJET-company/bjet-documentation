@@ -51,51 +51,86 @@ partner.phone → phone_number
 
 ## Advanced Field Types
 
+Our API connector supports **relational field mapping** directly from the configuration UI.  
+This eliminates the need for custom Python functions — instead, users can configure mappings in the **API Configuration** screen by choosing **Value Calculation Type → Relational with Mapping Model** and linking to the correct mapping model.
+
+---
+
 ### Many2one Fields
 
-Mapping relational fields requires special handling:
+For single-value relations (e.g. `filed_id` on Model):
 
-```python
-# Map country using code
-def map_country(data):
-    country_code = data.get('country_code')
-    if country_code:
-        country = env['res.country'].search([
-            ('code', '=', country_code)
-        ], limit=1)
-        return country.id
-    return False
-```
+#### Example: Product → Unit of Measure
+
+**Product Creation config**
+
+| Field                       | Value Calculation Type         | External API Key | Mapping Model | Is Record Identifier |
+|------------------------------|--------------------------------|-----------------|---------------|----------------------|
+| Unit of Measure (Product)    | Relational with Mapping Model  | `uom_id`        | `uom`         | False                |
+
+**UoM config**
+
+| Field                                   | Value Calculation Type | External API Key | Is Record Identifier |
+|-----------------------------------------|------------------------|-----------------|----------------------|
+| Display Name (Product Unit of Measure)  | Plain                  | `name`          | False                |
+| ID (Product Unit of Measure)            | Plain                  | `id`            | True                 |
+
+💡 When the product is created via API, the system automatically resolves the `uom_id` from the external payload to the correct Odoo `uom.uom` record.
+
+---
 
 ### One2many Fields
 
-Handle multiple related records:
+For child records (e.g. order lines), configure a separate mapping model for the child object.
 
-```python
-def map_order_lines(order_data):
-    """Map order lines from API to Odoo format"""
-    lines = []
-    for item in order_data.get('items', []):
-        lines.append((0, 0, {
-            'product_id': find_product(item['sku']),
-            'quantity': item['qty'],
-            'price_unit': item['price']
-        }))
-    return lines
-```
+**Order config**
+
+| Field        | Value Calculation Type        | External API Key | Mapping Model |
+|--------------|-------------------------------|-----------------|---------------|
+| Order Lines  | Relational with Mapping Model | `items`         | order_line    |
+
+**Order Line config**
+
+| Field              | Value Calculation Type        | External API Key | Mapping Model   |
+|--------------------|-------------------------------|-----------------|-----------------|
+| Product            | Relational with Mapping Model | `sku`           | product         |
+| Quantity           | Plain                         | `qty`           | —               |
+| Unit Price         | Plain                         | `price`         | —               |
+
+The connector generates `(0, 0, {...})` tuples automatically from each child record.
+
+---
 
 ### Many2many Fields
 
-Map multiple relationships:
+For multiple relationships (e.g. tags), define a mapping model that resolves external values into Odoo IDs.
 
-```python
-def map_tags(tag_names):
-    """Map tag names to tag IDs"""
-    tags = env['product.tag'].search([
-        ('name', 'in', tag_names)
-    ])
-    return [(6, 0, tags.ids)]
-```
+**Product config**
+
+| Field   | Value Calculation Type        | External API Key | Mapping Model  |
+|---------|-------------------------------|-----------------|----------------|
+| Tags    | Relational with Mapping Model | `tags`          | product_tag    |
+
+**Product Tag config**
+
+| Field        | Value Calculation Type | External API Key | Is Record Identifier |
+|--------------|------------------------|-----------------|----------------------|
+| Tag Name     | Plain                  | `name`          | True                 |
+| External ID  | Plain                  | `id`            | False                |
+
+The connector builds the `(6, 0, ids)` list automatically.
+
+---
+
+### Why This Flow Works
+
+- **UI-first**: Users configure mapping entirely through the API Configuration screen — no coding required.  
+- **Reusable**: Each relational mapping model (e.g. `uom`, `order_line`, `product_tag`) can be linked to multiple parent configurations.  
+- **Consistent**: The same pattern works for `Many2one`, `One2many`, and `Many2many`.  
+- **Extensible**: Developers can still extend mapping models if special business logic is required.
+
+---
+
 
 ## Data Transformation
 
@@ -129,6 +164,7 @@ def transform_inbound(data):
 
 #### Date Format Conversion
 
+if you have method 'convert_date_format'
 ```python
 from datetime import datetime
 
@@ -154,6 +190,11 @@ def convert_date_format(date_string):
     
     return False
 ```
+you can use this as a script by mode 'Evaluate'
+
+```python
+record.convert_date_format(request_data.get('date_string'))
+```
 
 #### Currency Conversion
 
@@ -176,6 +217,11 @@ def convert_currency(amount, from_currency, to_currency):
     
     return base_amount * target_rate
 ```
+you can use this as a script by mode 'Evaluate'
+
+```python
+record.convert_currency(request_data.get('amount'), 'UAH', 'USD')
+```
 
 ## Conditional Mapping
 
@@ -183,100 +229,80 @@ def convert_currency(amount, from_currency, to_currency):
 
 Map fields based on conditions:
 
+you can use this as a script by mode 'Execute'
+
 ```python
-def conditional_mapping(record, api_data):
-    """Apply different mappings based on conditions"""
     
-    mapping = {}
-    
-    # Map based on customer type
-    if api_data.get('customer_type') == 'B2B':
-        mapping.update({
-            'is_company': True,
-            'partner_type': 'company',
-            'vat': api_data.get('tax_id')
-        })
-    else:
-        mapping.update({
-            'is_company': False,
-            'partner_type': 'individual',
-            'first_name': api_data.get('first_name'),
-            'last_name': api_data.get('last_name')
-        })
-    
-    # Map based on country
-    country = api_data.get('country')
-    if country == 'US':
-        mapping['state_id'] = find_us_state(api_data.get('state'))
-    
-    return mapping
+mapping = {}
+
+# Map based on customer type
+if request_data.get('customer_type') == 'B2B':
+    mapping.update({
+        'is_company': True,
+        'partner_type': 'company',
+        'vat': request_data.get('tax_id')
+    })
+else:
+    mapping.update({
+        'is_company': False,
+        'partner_type': 'individual',
+        'first_name': request_data.get('first_name'),
+        'last_name': request_data.get('last_name')
+    })
+
+# Map based on country
+country = request_data.get('country')
+if country == 'US':
+    mapping['state_id'] = find_us_state(request_data.get('state'))
+
+env['res.partner'].create(mapping)
 ```
 
 ### Validation Rules
 
 Implement field validation:
 
+you can use this as a script by mode 'Execute'
+
 ```python
-def validate_field_mapping(field_name, value):
-    """Validate field values before mapping"""
     
-    validations = {
-        'email': lambda v: '@' in v and '.' in v,
-        'phone': lambda v: len(v.replace('-', '')) >= 10,
-        'vat': lambda v: v.isalnum(),
-        'zip': lambda v: v.isdigit() and len(v) == 5
-    }
-    
-    validator = validations.get(field_name)
-    if validator and not validator(value):
+validations = {
+    'email': lambda v: '@' in v and '.' in v,
+    'phone': lambda v: len(v.replace('-', '')) >= 10,
+    'vat': lambda v: v.isalnum(),
+    'zip': lambda v: v.isdigit() and len(v) == 5
+}
+
+validator = validations.get('email') # as example
+for k in validations.keys():
+    if validator and not validator(request_data.get(k)):
         raise ValueError(f"Invalid {field_name}: {value}")
-    
-    return value
 ```
 
 ## Nested JSON Mapping
 
 ### Handling Complex Structures
 
-Map nested JSON data:
+For deeply nested objects (e.g. customer → address → tags), configure **relational mapping models**:
 
-```python
-def map_nested_json(json_data):
-    """Map complex nested JSON to Odoo fields"""
-    
-    result = {}
-    
-    # Extract from nested structure
-    customer = json_data.get('customer', {})
-    result['name'] = customer.get('name')
-    
-    # Handle nested address
-    address = customer.get('address', {})
-    result['street'] = address.get('line1')
-    result['street2'] = address.get('line2')
-    result['city'] = address.get('city')
-    result['zip'] = address.get('postal_code')
-    
-    # Handle nested contact info
-    contact = customer.get('contact_info', {})
-    result['email'] = contact.get('email')
-    result['phone'] = contact.get('primary_phone')
-    result['mobile'] = contact.get('mobile_phone')
-    
-    # Handle arrays
-    result['tag_ids'] = [(6, 0, [
-        find_or_create_tag(tag) 
-        for tag in customer.get('tags', [])
-    ])]
-    
-    return result
-```
+- **Parent Config (e.g. Customer)**  
+  Define the top-level fields and link relational fields to sub-mapping models.
+
+- **Child Config (e.g. Address, Tags)**  
+  Each nested structure (like `address` or `tags`) is represented by its own mapping model.  
+  These models resolve the nested JSON into Odoo fields (e.g. `street`, `city`, `zip`, or Many2many tags).
+
 
 ### Flattening Nested Data
 
+For dynamic or unpredictable payloads, you can flatten nested JSON in **Execute mode**.  
+This allows you to preprocess the incoming request into a simple key/value format that the connector can then map normally.
+
+#### Example: Flatten Nested JSON
+
 ```python
 def flatten_json(nested_json, parent_key='', separator='_'):
-    """Flatten nested JSON structure"""
+    """Flatten nested JSON structure into simple key/value pairs"""
     items = []
     
     for key, value in nested_json.items():
@@ -292,6 +318,8 @@ def flatten_json(nested_json, parent_key='', separator='_'):
             items.append((new_key, value))
     
     return dict(items)
+
+record.flattened = flatten_json(request_data)
 ```
 
 ## Bi-directional Mapping
@@ -300,87 +328,14 @@ def flatten_json(nested_json, parent_key='', separator='_'):
 
 Configure mappings for both inbound and outbound:
 
-```python
-class BidirectionalMapper:
-    """Handle bi-directional field mapping"""
-    
-    def to_odoo(self, api_data):
-        """Map from API to Odoo"""
-        return {
-            'name': api_data.get('customer_name'),
-            'email': api_data.get('contact_email'),
-            'phone': self.format_phone(api_data.get('phone'))
-        }
-    
-    def to_api(self, odoo_record):
-        """Map from Odoo to API"""
-        return {
-            'customer_name': odoo_record.name,
-            'contact_email': odoo_record.email,
-            'phone': self.clean_phone(odoo_record.phone),
-            'customer_id': odoo_record.id,
-            'last_updated': odoo_record.write_date.isoformat()
-        }
-    
-    def format_phone(self, phone):
-        """Format phone for Odoo"""
-        if phone:
-            return '+' + ''.join(filter(str.isdigit, phone))
-        return ''
-    
-    def clean_phone(self, phone):
-        """Format phone for API"""
-        if phone:
-            return phone.replace('+', '').replace('-', '')
-        return ''
-```
-
-## Performance Optimization
-
-### Batch Processing
-
-Process multiple records efficiently:
+you can use this as a script by mode 'Evaluate'
 
 ```python
-def batch_map_records(records, batch_size=100):
-    """Map records in batches for better performance"""
-    
-    mapped_records = []
-    
-    for i in range(0, len(records), batch_size):
-        batch = records[i:i + batch_size]
-        
-        # Preload related data
-        product_ids = [r.get('product_id') for r in batch]
-        products = env['product.product'].browse(product_ids)
-        product_map = {p.id: p for p in products}
-        
-        # Map batch
-        for record in batch:
-            mapped = map_single_record(record)
-            mapped['product'] = product_map.get(record['product_id'])
-            mapped_records.append(mapped)
-    
-    return mapped_records
-```
-
-### Caching Lookups
-
-```python
-class MappingCache:
-    """Cache frequently looked up values"""
-    
-    def __init__(self):
-        self._cache = {}
-    
-    def get_country(self, code):
-        """Get country with caching"""
-        if code not in self._cache:
-            country = env['res.country'].search([
-                ('code', '=', code)
-            ], limit=1)
-            self._cache[code] = country.id if country else False
-        return self._cache[code]
+record.format_phone(request_data.get('phone'))
+# OR
+record.clean_phone(request_data.get('phone'))
+# OR
+record.write_date.isoformat()
 ```
 
 ## Troubleshooting Field Mapping
