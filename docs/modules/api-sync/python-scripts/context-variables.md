@@ -117,9 +117,8 @@ Command.unlink(record_id)
 ### Evaluate Mode
 Return computed values for field assignment:
 ```python
-# Script must return a value
-partner_name = request_data.get('customer', {}).get('name', '')
-result = partner_name.upper()  # This value will be assigned to the field
+request_data.get('customer', {}).get('name', '').upper()  
+# This value will be assigned to the field
 ```
 
 ### Execute Mode
@@ -131,74 +130,33 @@ for item in request_data.get('items', []):
         'name': item['name'],
         'list_price': item['price']
     })
-# No result variable needed
+# This value will not be assigned to the field, only create in DB
 ```
 
 ## Complete Example Scripts
 
 ### Example 1: Data Validation
 ```python
-# Validate incoming data before processing
+# Clean phone number Evaluate Mode
+re.sub(r'[^0-9+]', '', request_data.get('phone', ''))
+
+# Validate incoming data before processing Execute Mode
 email = request_data.get('email', '')
 import re
 
 if email and not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email):
     raise UserError(f'Invalid email format: {email}')
-
-# Clean phone number
-phone = request_data.get('phone', '')
-result = re.sub(r'[^0-9+]', '', phone)
 ```
 
 ### Example 2: Format Conversion
 ```python
-# Convert date format
-date_str = request_data.get('order_date')
-if date_str:
-    # Convert from MM/DD/YYYY to YYYY-MM-DD
-    dt = datetime.strptime(date_str, '%m/%d/%Y')
-    result = dt.strftime('%Y-%m-%d')
-else:
-    result = False
+# Convert date format Evaluate Mode
+datetime.strptime(request_data.get('order_date'), '%m/%d/%Y').strftime('%Y-%m-%d')
 ```
 
-### Example 3: Conditional Logic
+### Example 3: External Lookups
 ```python
-# Apply business rules based on data values
-amount = float(request_data.get('amount', 0))
-customer_type = request_data.get('type')
-
-if customer_type == 'VIP' and amount > 1000:
-    result = amount * 0.9  # 10% discount
-elif customer_type == 'Regular' and amount > 500:
-    result = amount * 0.95  # 5% discount
-else:
-    result = amount
-```
-
-### Example 4: Relational Processing
-```python
-# Handle complex relationships between records
-partner_ref = request_data.get('partner_code')
-if partner_ref:
-    partner = env['res.partner'].search([('ref', '=', partner_ref)], limit=1)
-    if partner:
-        result = partner.id
-    else:
-        # Create new partner if not found
-        new_partner = env['res.partner'].create({
-            'name': request_data.get('partner_name'),
-            'ref': partner_ref,
-            'email': request_data.get('partner_email')
-        })
-        result = new_partner.id
-else:
-    result = False
-```
-
-### Example 5: External Lookups
-```python
-# Fetch additional data from external sources
+# Fetch additional data from external sources Execute Mode
 import requests
 
 product_sku = request_data.get('sku')
