@@ -18,6 +18,7 @@ Receive data from external systems into Odoo. External APIs can send data to you
 - Receiving orders from e-commerce platforms
 - Importing customer data from CRM systems
 - Syncing inventory from warehouse management systems
+- Syncing another system or two different Odoo 
 
 ### Outbound Configuration
 Send Odoo data to external systems. Automatically push data from Odoo to external APIs based on triggers and events.
@@ -26,6 +27,7 @@ Send Odoo data to external systems. Automatically push data from Odoo to externa
 - Sending invoices to accounting systems
 - Updating product catalogs on e-commerce sites
 - Syncing customer data with marketing platforms
+- Syncing another system or two different Odoo
 
 ## Core Configuration Components
 
