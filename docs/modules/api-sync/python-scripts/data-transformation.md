@@ -51,7 +51,7 @@ Command  # Record manipulation commands
 Returns computed values for field assignment:
 ```python
 # Return a calculated value
-result = record.price * 1.2  # Add 20% markup
+record.price * 1.2  # Add 20% markup
 ```
 
 ### Execute Mode
@@ -83,8 +83,6 @@ required_fields = ['name', 'email', 'phone']
 missing = [f for f in required_fields if not request_data.get(f)]
 if missing:
     raise UserError(f"Missing required fields: {', '.join(missing)}")
-
-result = email  # Return validated email
 ```
 
 ### 2. Format Conversion
@@ -96,21 +94,10 @@ Convert between different data formats:
 from datetime import datetime
 
 # Convert from MM/DD/YYYY to YYYY-MM-DD
-date_str = request_data.get('birth_date', '')
-if date_str:
-    date_obj = datetime.strptime(date_str, '%m/%d/%Y')
-    result = date_obj.strftime('%Y-%m-%d')
-else:
-    result = False
+datetime.strptime(request_data.get('birth_date', ''), '%m/%d/%Y').strftime('%Y-%m-%d')
 
 # Phone number formatting
-phone = request_data.get('phone', '')
-# Remove all non-numeric characters
-cleaned = ''.join(filter(str.isdigit, phone))
-if len(cleaned) == 10:
-    result = f"+1{cleaned}"  # Add country code
-else:
-    result = phone
+''.join(filter(str.isdigit, request_data.get('phone', '')))
 ```
 
 ### 3. Conditional Logic
@@ -139,8 +126,6 @@ record.write({
     'customer_category': category,
     'discount_percentage': discount * 100
 })
-
-result = category
 ```
 
 ### 4. Relational Processing
@@ -165,34 +150,9 @@ if partner_data:
             'email': partner_data.get('email'),
             'phone': partner_data.get('phone'),
         })
-    
-    result = partner.id
-else:
-    result = False
 ```
 
-### 5. External Lookups
-
-Fetch additional data from external sources:
-
-```python
-# Currency conversion example
-import requests
-
-amount_usd = request_data.get('amount_usd', 0)
-if amount_usd:
-    # Get exchange rate (example - use actual API)
-    response = requests.get('https://api.exchangerate.com/usd-eur')
-    if response.status_code == 200:
-        rate = response.json().get('rate', 1)
-        result = amount_usd * rate
-    else:
-        result = amount_usd
-else:
-    result = 0
-```
-
-### 6. Data Aggregation
+### 5. Data Aggregation
 
 Calculate summary values from multiple sources:
 
@@ -222,7 +182,7 @@ for item in line_items:
         'price_unit': item.get('price'),
     })
 
-result = total + tax_total
+record.write({'amount': total + tax_total})
 ```
 
 ## Advanced Techniques
@@ -235,14 +195,12 @@ try:
     value = int(request_data.get('quantity'))
     if value < 0:
         raise ValueError("Quantity cannot be negative")
-    result = value
 except ValueError as e:
     # Log error and use default
     env['bj.api.log'].create({
         'name': f"Data transformation error: {str(e)}",
         'request_data': str(request_data),
     })
-    result = 0
 ```
 
 ### Logging and Debugging
@@ -304,10 +262,10 @@ request_data['field'] = 'value'  # Don't do this
 modified_value = request_data.get('field', '') + '_suffix'
 
 # ❌ Bad: Using undefined variables
-result = undefined_variable  # Will cause error
+undefined_variable  # Will cause error
 
 # ✅ Good: Check variable existence
-result = locals().get('variable_name', default_value)
+locals().get('variable_name', default_value)
 
 # ❌ Bad: Infinite loops
 while True:  # Dangerous
