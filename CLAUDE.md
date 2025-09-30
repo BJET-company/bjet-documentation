@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Docusaurus 3.6.3 documentation site for BJET Odoo modules. The site is designed to host documentation for multiple Odoo modules, with the API Synchronization Module (v18.0.1.0.2) currently documented.
+This is a Docusaurus 3.6.3 documentation site for BJET Odoo modules. The site is designed to host documentation for multiple Odoo modules, with the API Synchronization Module (v18.0.1.0.4) currently documented.
 
 ## Key Commands
 

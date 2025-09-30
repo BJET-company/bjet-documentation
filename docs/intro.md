@@ -19,7 +19,7 @@ import Link from '@docusaurus/Link';
         <h3>📦 API Synchronization</h3>
       </div>
       <div className="card__body">
-        <p><strong>Version:</strong> 18.0.1.0.2</p>
+        <p><strong>Version:</strong> 18.0.1.0.4</p>
         <p>Synchronize Odoo models with external APIs through RESTful interfaces.</p>
         <ul style={{fontSize: '0.9em'}}>
           <li>Bidirectional sync</li>

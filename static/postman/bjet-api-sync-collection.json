@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "BJET API Synchronization Module",
-    "description": "Complete API testing suite for Odoo BJET API Synchronization Module v18.0.1.0.2",
+    "description": "Complete API testing suite for Odoo BJET API Synchronization Module v18.0.1.0.4",
     "_postman_id": "bjet-api-sync-v18",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },

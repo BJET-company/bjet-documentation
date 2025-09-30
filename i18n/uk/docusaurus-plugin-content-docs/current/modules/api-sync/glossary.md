@@ -7,7 +7,7 @@ keywords: [глосарій, терміни, визначення, api, синх
 
 # Глосарій
 
-<span className="version-badge">v18.0.1.0.2</span>
+<span className="version-badge">v18.0.1.0.4</span>
 
 Ключові терміни та визначення для модуля синхронізації API BJET.
 

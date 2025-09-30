@@ -116,7 +116,7 @@ const config = {
       announcementBar: {
         id: 'module_version',
         content:
-          '<b>API Synchronization Module v18.0.1.0.2</b> - Now available for Odoo 18.0 <a href="/docs/modules/api-sync/quick-start">Get Started →</a>',
+          '<b>API Synchronization Module v18.0.1.0.4</b> - Now available for Odoo 18.0 <a href="/docs/modules/api-sync/quick-start">Get Started →</a>',
         backgroundColor: '#2116e6',
         textColor: '#ffffff',
         isCloseable: true,

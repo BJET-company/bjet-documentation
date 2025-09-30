@@ -7,7 +7,7 @@ keywords: [performance, optimization, pagination, batch, caching]
 
 # Performance Optimization
 
-<span className="version-badge">v18.0.1.0.2</span>
+<span className="version-badge">v18.0.1.0.4</span>
 
 The BJET API Synchronization Module includes several performance optimization features to ensure efficient operation.
 
@@ -26,14 +26,6 @@ Optimize API operations by processing multiple records together:
 - **Handle multiple records in a single API call** - Reduce the number of API requests
 - **Optimized database queries** - Efficient data retrieval from Odoo
 - **Reduced network overhead** - Minimize network traffic and latency
-
-## Caching Mechanisms
-
-Built-in caching features improve performance:
-
-- **Configuration caching for faster lookups** - Cache frequently accessed configuration data
-- **Field mapping cache optimization** - Store field mappings in memory for quick access
-- **Authentication token reuse** - Reuse authentication tokens to avoid repeated authentication
 
 ## Timeout Management
 

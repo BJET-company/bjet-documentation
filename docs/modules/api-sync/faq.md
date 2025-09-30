@@ -7,7 +7,7 @@ description: Common questions and answers about the BJET API Synchronization Mod
 
 # Frequently Asked Questions
 
-<span className="version-badge">v18.0.1.0.2</span>
+<span className="version-badge">v18.0.1.0.4</span>
 
 Common questions about the BJET API Synchronization Module.
 
@@ -19,7 +19,7 @@ The BJET API Synchronization Module enables bidirectional data synchronization b
 
 ### Which Odoo versions are supported?
 
-This version (18.0.1.0.2) is designed for Odoo 18.0.
+This version (18.0.1.0.4) is designed for Odoo 18.0.
 
 ### What authentication methods are supported?
 

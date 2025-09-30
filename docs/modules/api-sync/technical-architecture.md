@@ -7,7 +7,7 @@ keywords: [architecture, technical, models, controller, pipeline]
 
 # Technical Architecture
 
-<span className="version-badge">v18.0.1.0.2</span>
+<span className="version-badge">v18.0.1.0.4</span>
 
 ## Core Configuration Model
 

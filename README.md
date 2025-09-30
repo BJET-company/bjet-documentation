@@ -15,7 +15,7 @@ This repository contains the official documentation for BJET Odoo Modules. Built
 
 ### Featured Module
 
-**API Synchronization Module v18.0.1.0.2** - A comprehensive and flexible module that synchronizes Odoo models with external APIs, enabling seamless bidirectional data integration through RESTful interfaces.
+**API Synchronization Module v18.0.1.0.4** - A comprehensive and flexible module that synchronizes Odoo models with external APIs, enabling seamless bidirectional data integration through RESTful interfaces.
 
 ## Quick Start
 
@@ -200,9 +200,9 @@ This documentation is licensed under OPL-1 (Odoo Proprietary License).
 
 ## Module Versions
 
-| Module | Version | Odoo Version | Status |
-|--------|---------|--------------|--------|
-| API Synchronization | 18.0.1.0.2 | 18.0 | Stable |
+| Module | Version    | Odoo Version | Status |
+|--------|------------|--------------|--------|
+| API Synchronization | 18.0.1.0.4 | 18.0 | Stable |
 
 ---
 

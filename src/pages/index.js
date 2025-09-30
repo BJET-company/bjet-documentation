@@ -58,7 +58,7 @@ export default function Home() {
                 </div>
                 <div className="card__body">
                   <p>
-                    <Translate id="homepage.apiSync.description">Version 18.0.1.0.2 - Comprehensive bidirectional API integration for Odoo 18.0</Translate>
+                    <Translate id="homepage.apiSync.description">Version 18.0.1.0.4 - Comprehensive bidirectional API integration for Odoo 18.0</Translate>
                   </p>
                   <ul>
                     <li><Translate id="homepage.apiSync.features.inbound">Inbound & Outbound APIs</Translate></li>

@@ -7,7 +7,7 @@ keywords: [glossary, terms, definitions, api, synchronization]
 
 # Glossary
 
-<span className="version-badge">v18.0.1.0.2</span>
+<span className="version-badge">v18.0.1.0.4</span>
 
 Key terms and definitions for the BJET API Synchronization Module.
 
