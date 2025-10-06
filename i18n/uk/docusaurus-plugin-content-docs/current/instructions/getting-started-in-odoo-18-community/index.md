@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Getting Started in Odoo 18 Community
+title: Початок роботи в Odoo 18 Community
 ---
 
 ## Початок роботи в Odoo 18 Community (Інструкція для адміністратора)

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: Basic Odoo system settings
+title: Базові налаштування системи Odoo
 ---
 
 # Базові налаштування системи Odoo

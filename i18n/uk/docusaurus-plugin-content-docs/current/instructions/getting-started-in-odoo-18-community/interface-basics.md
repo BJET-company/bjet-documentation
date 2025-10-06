@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Interface basics
+title: Основи роботи з інтерфейсом
 ---
 
 # Основи роботи з інтерфейсом Odoo 18
