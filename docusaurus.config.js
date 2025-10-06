@@ -147,6 +147,23 @@ const config = {
             ],
           },
           {
+            type: 'dropdown',
+            label: 'Instructions',
+            position: 'left',
+            items: [
+              {
+                label: 'Getting Started in Odoo 18 Community',
+                to: 'docs/instructions/getting-started-in-odoo-18-community',
+              },
+              // Add more modules here as they become available
+            ],
+          },
+          // {
+          //   to: '/docs/instructions/getting-started-in-odoo-18-community/overview',
+          //   label: 'Instructions',
+          //   position: 'left',
+          // },
+          {
             to: '/docs/downloads/postman',
             label: 'Downloads',
             position: 'left',

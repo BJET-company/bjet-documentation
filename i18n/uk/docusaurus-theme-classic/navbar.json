@@ -27,6 +27,14 @@
     "message": "API Синхронізація",
     "description": "Navbar item with label API Synchronization"
   },
+  "item.label.Instructions": {
+    "message": "Інструкції",
+    "description": "Navbar item with label Instructions"
+  },
+  "item.label.Getting Started in Odoo 18 Community": {
+    "message": "Початок роботи в Odoo 18 Community",
+    "description": "Navbar item with label Getting Started in Odoo 18 Community"
+  },
   "item.label.Postman Collection": {
     "message": "Колекція Postman",
     "description": "Navbar item with label Postman Collection"

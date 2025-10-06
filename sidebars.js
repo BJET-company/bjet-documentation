@@ -88,6 +88,24 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Instructions',
+      items: [
+        {
+          type: 'category',
+          label: 'Getting Started in Odoo 18 Community',
+          link: {
+            type: 'doc',
+            id: 'instructions/getting-started-in-odoo-18-community/index',
+          },
+          items: [
+            'instructions/getting-started-in-odoo-18-community/interface-basics',
+            'instructions/getting-started-in-odoo-18-community/system-configuration',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: 'Downloads',
       items: [
         'downloads/postman',

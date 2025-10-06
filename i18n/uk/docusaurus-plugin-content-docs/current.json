@@ -42,5 +42,25 @@
   "sidebar.tutorialSidebar.category.Python Scripts": {
     "message": "Python Скрипти",
     "description": "The label for category Python Scripts in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Instructions": {
+    "message": "Інструкції",
+    "description": "The label for category Instructions in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Getting Started in Odoo 18 Community": {
+    "message": "Початок роботи в Odoo 18 Community",
+    "description": "The label for category Getting Started in Odoo 18 Community in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.doc.Interface basics": {
+    "message": "Основи роботи з інтерфейсом",
+    "description": "The label for the doc item Interface basics in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.doc.Basic Odoo system settings": {
+    "message": "Базові налаштування системи Odoo",
+    "description": "The label for the doc item Basic Odoo system settings in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Downloads": {
+    "message": "Завантаження",
+    "description": "The label for category Downloads in sidebar tutorialSidebar"
   }
 }
