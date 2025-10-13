@@ -78,6 +78,15 @@ const sidebars = {
             'modules/api-sync/glossary',
           ],
         },
+        {
+          type: 'category',
+          label: 'Print Form Builder',
+          link: {
+            type: 'doc',
+            id: 'modules/print-form-builder/index',
+          },
+          items: [],
+        },
         // Future modules will be added here
         // {
         //   type: 'category',

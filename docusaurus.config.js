@@ -143,6 +143,10 @@ const config = {
                 label: 'API Synchronization',
                 to: '/docs/modules/api-sync',
               },
+              {
+                label: 'Print Form Builder',
+                to: '/docs/modules/print-form-builder',
+              },
               // Add more modules here as they become available
             ],
           },

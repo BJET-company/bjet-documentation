@@ -40,21 +40,23 @@ import Link from '@docusaurus/Link';
   <div className="col col--4">
     <div className="card shadow--md">
       <div className="card__header">
-        <h3>🚀 Module Two</h3>
+        <h3>📝 Print Form Builder</h3>
       </div>
       <div className="card__body">
         <p><strong>Version:</strong> Coming Soon</p>
-        <p>Enhanced functionality for your Odoo instance with advanced features.</p>
+        <p>Create and customize professional print forms for your Odoo reports.</p>
         <ul style={{fontSize: '0.9em'}}>
-          <li>Feature preview</li>
-          <li>Advanced capabilities</li>
-          <li>Enterprise ready</li>
+          <li>Custom templates</li>
+          <li>Drag & drop builder</li>
+          <li>Professional layouts</li>
         </ul>
       </div>
       <div className="card__footer">
-        <button className="button button--secondary button--block" disabled>
-          Coming Soon
-        </button>
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/print-form-builder">
+          View Documentation
+        </Link>
       </div>
     </div>
   </div>
