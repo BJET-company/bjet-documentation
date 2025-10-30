@@ -85,7 +85,13 @@ const sidebars = {
             type: 'doc',
             id: 'modules/print-form-builder/index',
           },
-          items: [],
+          items: [
+            'modules/print-form-builder/installation',
+            'modules/print-form-builder/creating-forms',
+            'modules/print-form-builder/gpt-integration',
+            'modules/print-form-builder/template-variables',
+            'modules/print-form-builder/troubleshooting',
+          ],
         },
         // Future modules will be added here
         // {

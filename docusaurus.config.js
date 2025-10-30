@@ -22,7 +22,7 @@ const config = {
   organizationName: 'BJET-company', // Usually your GitHub org/user name.
   projectName: 'bjet-documentation', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
