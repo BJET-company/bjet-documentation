@@ -64,21 +64,23 @@ import Link from '@docusaurus/Link';
   <div className="col col--4">
     <div className="card shadow--md">
       <div className="card__header">
-        <h3>📊 Module Three</h3>
+        <h3>💱 Import NBU Exchange Rate</h3>
       </div>
       <div className="card__body">
-        <p><strong>Version:</strong> In Development</p>
-        <p>Comprehensive reporting and analytics module for data-driven decisions.</p>
+        <p><strong>Version:</strong> 18.0.1.0.2</p>
+        <p>Automatic and manual import of exchange rates from the National Bank of Ukraine.</p>
         <ul style={{fontSize: '0.9em'}}>
-          <li>Real-time analytics</li>
-          <li>Custom dashboards</li>
-          <li>Export capabilities</li>
+          <li>Automatic rate updates</li>
+          <li>Manual import by period</li>
+          <li>Scheduler configuration</li>
         </ul>
       </div>
       <div className="card__footer">
-        <button className="button button--secondary button--block" disabled>
-          In Development
-        </button>
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/import-nbu-exchange-rate">
+          View Documentation
+        </Link>
       </div>
     </div>
   </div>

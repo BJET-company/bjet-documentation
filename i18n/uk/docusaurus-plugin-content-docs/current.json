@@ -62,5 +62,13 @@
   "sidebar.tutorialSidebar.category.Downloads": {
     "message": "Завантаження",
     "description": "The label for category Downloads in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Print Form Builder": {
+    "message": "Конструктор друкованих форм",
+    "description": "The label for category Print Form Builder in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Import NBU Exchange Rate": {
+    "message": "Курси валют НБУ",
+    "description": "The label for category Import NBU Exchange Rate in sidebar tutorialSidebar"
   }
 }

@@ -27,6 +27,14 @@
     "message": "API Синхронізація",
     "description": "Navbar item with label API Synchronization"
   },
+  "item.label.Print Form Builder": {
+    "message": "Конструктор друкованих форм",
+    "description": "Navbar item with label Print Form Builder"
+  },
+  "item.label.Import NBU Exchange Rate": {
+    "message": "Курси валют НБУ",
+    "description": "Navbar item with label Import NBU Exchange Rate"
+  },
   "item.label.Instructions": {
     "message": "Інструкції",
     "description": "Navbar item with label Instructions"
