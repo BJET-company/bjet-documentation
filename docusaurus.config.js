@@ -147,6 +147,10 @@ const config = {
                 label: 'Print Form Builder',
                 to: '/docs/modules/print-form-builder',
               },
+              {
+                label: 'Import NBU Exchange Rate',
+                to: '/docs/modules/import-nbu-exchange-rate',
+              },
               // Add more modules here as they become available
             ],
           },

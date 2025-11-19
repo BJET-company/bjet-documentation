@@ -93,6 +93,19 @@ const sidebars = {
             'modules/print-form-builder/troubleshooting',
           ],
         },
+        {
+          type: 'category',
+          label: 'Import NBU Exchange Rate',
+          link: {
+            type: 'doc',
+            id: 'modules/import-nbu-exchange-rate/index',
+          },
+          items: [
+            'modules/import-nbu-exchange-rate/installation',
+            'modules/import-nbu-exchange-rate/configuration',
+            'modules/import-nbu-exchange-rate/troubleshooting',
+          ],
+        },
         // Future modules will be added here
         // {
         //   type: 'category',
