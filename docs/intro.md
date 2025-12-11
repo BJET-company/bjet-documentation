@@ -86,6 +86,32 @@ import Link from '@docusaurus/Link';
   </div>
 </div>
 
+<div className="row margin-bottom--lg">
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>🏦 Monobank Statement Import</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Version:</strong> 18.0.1.0.1</p>
+        <p>Direct integration between Monobank and Odoo for automatic bank statement import.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Automatic statement import</li>
+          <li>Manual import by date range</li>
+          <li>Duplicate transaction prevention</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/monobank-statement-import">
+          View Documentation
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
+
 ## Quick Links
 
 - 📚 [API Sync Configuration Guide](/docs/modules/api-sync/configuration/overview)

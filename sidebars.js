@@ -106,6 +106,19 @@ const sidebars = {
             'modules/import-nbu-exchange-rate/troubleshooting',
           ],
         },
+        {
+          type: 'category',
+          label: 'Monobank Statement Import',
+          link: {
+            type: 'doc',
+            id: 'modules/monobank-statement-import/index',
+          },
+          items: [
+            'modules/monobank-statement-import/installation',
+            'modules/monobank-statement-import/configuration',
+            'modules/monobank-statement-import/troubleshooting',
+          ],
+        },
         // Future modules will be added here
         // {
         //   type: 'category',
