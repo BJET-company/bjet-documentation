@@ -86,6 +86,32 @@ import Link from '@docusaurus/Link';
   </div>
 </div>
 
+<div className="row margin-bottom--lg">
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>🏦 Імпорт виписок Monobank</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Версія:</strong> 18.0.1.0.1</p>
+        <p>Пряма інтеграція між Monobank та Odoo для автоматичного імпорту банківських виписок.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Автоматичний імпорт виписок</li>
+          <li>Ручний імпорт за період</li>
+          <li>Запобігання дублюванню транзакцій</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/monobank-statement-import">
+          Переглянути документацію
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
+
 ## Швидкі посилання
 
 - 📚 [Посібник з конфігурації API Sync](/docs/modules/api-sync/configuration/overview)
