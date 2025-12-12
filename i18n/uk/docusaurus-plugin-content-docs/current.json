@@ -70,5 +70,9 @@
   "sidebar.tutorialSidebar.category.Import NBU Exchange Rate": {
     "message": "Курси валют НБУ",
     "description": "The label for category Import NBU Exchange Rate in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.PrivatBank 24 business: import of bank statement": {
+    "message": "ПриватБанк24 бізнес: імпорт банківських виписок",
+    "description": "The label for category PrivatBank 24 business: import of bank statement in sidebar tutorialSidebar"
   }
 }

@@ -155,6 +155,10 @@ const config = {
                 label: 'Monobank Statement Import',
                 to: '/docs/modules/monobank-statement-import',
               },
+              {
+                label: 'PrivatBank 24 business: import of bank statement',
+                to: '/docs/modules/privatbank-autoclient-statement-import',
+              },
               // Add more modules here as they become available
             ],
           },
