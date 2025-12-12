@@ -12,15 +12,15 @@ sidebar_label: Налаштування
 
 1. Створіть або відкрийте банківський журнал (Тип журналу = **Банк** (Bank)).
 2. Вкажіть номер банківського рахунку.
-3. На вкладці **Journal Entries** знайдіть поле **Bank Feeds**.
+3. На вкладці **Записи в журналі** знайдіть поле **Банківська виписка**.
 4. Оберіть **Monobank API**.
 
-![Вибір Monobank API у полі Bank Feeds](/img/monobank-statement-import/uk-journal-bank-feeds-monobank-api.png)
+![Вибір Monobank API у полі Банківська виписка](/img/monobank-statement-import/uk-journal-bank-feeds-monobank-api.png)
 
 5. З'явиться нова вкладка **Monobank**.
 
 :::info Примітка
-Якщо пізніше вибрати інший варіант Bank Feeds — вкладка Monobank приховається.
+Якщо пізніше вибрати інший варіант Банківська виписка — вкладка Monobank приховається.
 :::
 
 ### Крок 2: Налаштування вкладки Monobank
@@ -29,7 +29,7 @@ sidebar_label: Налаштування
 
 ![Налаштування вкладки Monobank](/img/monobank-statement-import/uk-monobank-tab-configuration.png)
 
-#### API Token Monobank
+#### API-токен Monobank
 
 Щоб заповнити це поле:
 
@@ -39,7 +39,7 @@ sidebar_label: Налаштування
 
 ![Активація токену на сайті Monobank API](/img/monobank-statement-import/uk-monobank-api-activate-token.png)
 
-3. Вставте токен у поле **API Token Monobank**.
+3. Вставте токен у поле **API-токен Monobank**.
 
 #### Період імпорту (дні)
 
@@ -54,7 +54,7 @@ sidebar_label: Налаштування
 ![Журнал з налаштованим cron](/img/monobank-statement-import/uk-monobank-tab-cron-created.png)
 
 :::warning Важливо
-Якщо Monobank перестає бути джерелом Bank Feeds → cron автоматично видаляється.
+Якщо Monobank перестає бути джерелом Банківська виписка → cron автоматично видаляється.
 :::
 
 ## Перевірка з'єднання

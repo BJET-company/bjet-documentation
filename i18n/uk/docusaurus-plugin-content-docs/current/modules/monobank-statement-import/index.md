@@ -8,7 +8,7 @@ sidebar_label: "Монобанк: імпорт банківських випис
 
 ## Опис модуля
 
-Модуль Monobank Statement Import забезпечує пряму інтеграцію між Монобанк та Odoo 18 (Community та Enterprise).
+Модуль Монобанк: імпорт банківських виписок забезпечує пряму інтеграцію між Монобанк та Odoo 18 (Community та Enterprise).
 
 Він автоматично імпортує банківські виписки у стандартні моделі Odoo: `account.bank.statement` та `account.bank.statement.line`.
 

@@ -8,7 +8,7 @@ sidebar_label: "Monobank: Bank Statements Import"
 
 ## Module Description
 
-The Monobank Statement Import module provides direct integration between Monobank and Odoo 18 (Community and Enterprise).
+The Monobank: Bank Statements Import module provides direct integration between Monobank and Odoo 18 (Community and Enterprise).
 
 It automatically imports bank statements into the standard Odoo models: `account.bank.statement` and `account.bank.statement.line`.
 

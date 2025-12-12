@@ -10,7 +10,7 @@ sidebar_label: Installation
 
 1. Go to the **Apps** menu.
 
-2. Search for the **Monobank Statement Import** module.
+2. Search for the **Monobank: Bank Statements Import** module.
 
 3. Click **Install**.
 

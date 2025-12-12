@@ -26,14 +26,14 @@ sidebar_label: Troubleshooting
 
 ### Issue: Monobank Tab Does Not Appear
 
-**Symptoms:** After selecting Monobank in the Bank Feeds field, the tab does not appear.
+**Symptoms:** After selecting Monobank API in the Bank Feeds field, the tab does not appear.
 
 **Possible causes:**
-- Module not installed``
+- Module not installed
 - Journal type is not "Bank"
 
 **Solution:**
-1. Verify that the Monobank Statement Import module is installed
+1. Verify that the Monobank: Bank Statements Import module is installed
 2. Ensure that the journal type = "Bank"
 3. Refresh the page and repeat the selection
 
