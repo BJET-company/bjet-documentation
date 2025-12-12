@@ -74,5 +74,9 @@
   "sidebar.tutorialSidebar.category.PrivatBank 24 business: import of bank statement": {
     "message": "ПриватБанк24 бізнес: імпорт банківських виписок",
     "description": "The label for category PrivatBank 24 business: import of bank statement in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Monobank: Bank Statements Import": {
+    "message": "Монобанк: імпорт банківських виписок",
+    "description": "The label for category Monobank: Bank Statements Import in sidebar tutorialSidebar"
   }
 }

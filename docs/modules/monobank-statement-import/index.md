@@ -1,10 +1,10 @@
 ---
 sidebar_position: 4
-title: Monobank Statement Import
-sidebar_label: Monobank Statement Import
+title: "Monobank: Bank Statements Import"
+sidebar_label: "Monobank: Bank Statements Import"
 ---
 
-# BJet Monobank Statement Import
+# Monobank: Bank Statements Import
 
 ## Module Description
 
