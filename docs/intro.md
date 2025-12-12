@@ -110,7 +110,33 @@ import Link from '@docusaurus/Link';
       </div>
     </div>
   </div>
+
+  <div className="col col--4">
+     <div className="card shadow--md">
+       <div className="card__header">
+         <h3>🏦 PrivatBank 24 business: import of bank statement </h3>
+       </div>
+       <div className="card__body">
+         <p><strong>Version:</strong> 18.0.1.0.4</p>
+         <p>Importing bank statements from PrivatBank</p>
+         <ul style={{fontSize: '0.9em'}}>
+           <li>Automatic statement import</li>
+           <li>Manual import by date range</li>
+           <li>Duplicate transaction prevention</li>
+          </ul>
+       </div>
+       <div className="card__footer">
+         <Link
+           className="button button--primary button--block"
+           to="/docs/modules/privatbank-autoclient-statement-import">
+           View Documentation
+         </Link>
+       </div>
+     </div>
+  </div>
 </div>
+
+  
 
 ## Quick Links
 

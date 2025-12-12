@@ -119,6 +119,19 @@ const sidebars = {
             'modules/monobank-statement-import/troubleshooting',
           ],
         },
+        {
+          type: 'category',
+          label: 'PrivatBank 24 business: import of bank statement',
+          link: {
+            type: 'doc',
+            id: 'modules/privatbank-autoclient-statement-import/index',
+          },
+          items: [
+            'modules/privatbank-autoclient-statement-import/installation',
+            'modules/privatbank-autoclient-statement-import/configuration',
+            'modules/privatbank-autoclient-statement-import/troubleshooting',
+          ],
+        },
         // Future modules will be added here
         // {
         //   type: 'category',

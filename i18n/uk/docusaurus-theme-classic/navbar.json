@@ -47,6 +47,10 @@
     "message": "Колекція Postman",
     "description": "Navbar item with label Postman Collection"
   },
+  "item.label.PrivatBank 24 business: import of bank statement": {
+    "message": "ПриватБанк24 бізнес: імпорт банківських виписок",
+    "description": "Navbar item with label PrivatBank 24 business: import of bank statement"
+  },
   "logo.alt": {
     "message": "BJET Logo",
     "description": "The alt text of navbar logo"
