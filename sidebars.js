@@ -108,7 +108,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Monobank Statement Import',
+          label: 'Monobank: Bank Statements Import',
           link: {
             type: 'doc',
             id: 'modules/monobank-statement-import/index',

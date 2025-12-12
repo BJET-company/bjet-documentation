@@ -51,6 +51,10 @@
     "message": "ПриватБанк24 бізнес: імпорт банківських виписок",
     "description": "Navbar item with label PrivatBank 24 business: import of bank statement"
   },
+  "item.label.Monobank: Bank Statements Import": {
+    "message": "Монобанк: імпорт банківських виписок",
+    "description": "Navbar item with label Monobank: Bank Statements Import"
+  },
   "logo.alt": {
     "message": "BJET Logo",
     "description": "The alt text of navbar logo"

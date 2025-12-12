@@ -90,7 +90,7 @@ import Link from '@docusaurus/Link';
   <div className="col col--4">
     <div className="card shadow--md">
       <div className="card__header">
-        <h3>🏦 Імпорт виписок Monobank</h3>
+        <h3>🏦 Монобанк: імпорт банківських виписок</h3>
       </div>
       <div className="card__body">
         <p><strong>Версія:</strong> 18.0.1.0.1</p>

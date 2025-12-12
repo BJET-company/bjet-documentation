@@ -152,7 +152,7 @@ const config = {
                 to: '/docs/modules/import-nbu-exchange-rate',
               },
               {
-                label: 'Monobank Statement Import',
+                label: 'Monobank: Bank Statements Import',
                 to: '/docs/modules/monobank-statement-import',
               },
               {
