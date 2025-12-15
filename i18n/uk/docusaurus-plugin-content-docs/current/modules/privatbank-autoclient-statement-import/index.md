@@ -4,11 +4,11 @@ title: "ПриватБанк24 бізнес: імпорт банківських
 sidebar_label: "ПриватБанк24 бізнес: імпорт банківських виписок" 
 ---
 
-# BJet PrivatBank Autoclient Statement Import
+# ПриватБанк24 бізнес: імпорт банківських виписок
 
 ## Опис модуля
 
-Модуль PrivatBank Autoclient Statement Import забезпечує пряму інтеграцію між ПриватБанком та Odoo 18 (Community та Enterprise).
+Модуль ПриватБанк24 бізнес: імпорт банківських виписок забезпечує пряму інтеграцію між ПриватБанком та Odoo 18 (Community та Enterprise).
 
 Він автоматично імпортує банківські виписки у стандартні моделі Odoo: `account.bank.statement` та `account.bank.statement.line`
 
