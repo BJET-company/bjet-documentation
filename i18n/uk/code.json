@@ -1,6 +1,6 @@
 {
   "theme.banner.text": {
-    "message": "Модуль синхронізації API v18.0.1.0.4 - Доступний для Odoo 18.0",
+    "message": "Модуль синхронізації API v18.0.1.0.8 - Доступний для Odoo 18.0",
     "description": "The announcement banner text"
   },
   "theme.banner.button": {
@@ -26,7 +26,7 @@
     "message": "🔄 Модуль синхронізації API"
   },
   "homepage.apiSync.description": {
-    "message": "Версія 18.0.1.0.4 - Всебічна двонаправлена інтеграція API для Odoo 18.0"
+    "message": "Версія 18.0.1.0.8 - Всебічна двонаправлена інтеграція API для Odoo 18.0"
   },
   "homepage.apiSync.features.inbound": {
     "message": "Вхідні та вихідні API"

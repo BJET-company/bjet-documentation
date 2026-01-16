@@ -7,11 +7,10 @@ keywords: [glossary, terms, definitions, api, synchronization]
 
 # Glossary
 
-<span className="version-badge">v18.0.1.0.4</span>
+<span className="version-badge">v18.0.1.0.8</span>
 
 Key terms and definitions for the BJET API Synchronization Module.
 
-## A
 
 ### API (Application Programming Interface)
 A set of protocols and tools for building software applications. Defines how software components should interact.

@@ -6,7 +6,7 @@ sidebar_label: Overview
 
 # API Synchronization Module
 
-**Version:** 18.0.1.0.4  
+**Version:** 18.0.1.0.8  
 **License:** OPL-1  
 **Author:** BJET  
 **Compatibility:** Odoo 18.0
@@ -158,7 +158,7 @@ Download pre-configured API testing collection
 
 | Version    | Release Date | Notes |
 |------------|--------------|-------|
-| 18.0.1.0.4 | Current | Latest stable release for Odoo 18.0 |
+| 18.0.1.0.8 | Current | Latest stable release for Odoo 18.0 |
 
 ## Support Information
 
