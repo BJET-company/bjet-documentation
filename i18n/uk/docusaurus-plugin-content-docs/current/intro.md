@@ -19,7 +19,7 @@ import Link from '@docusaurus/Link';
         <h3>📦 API Синхронізація</h3>
       </div>
       <div className="card__body">
-        <p><strong>Версія:</strong> 18.0.1.0.4</p>
+        <p><strong>Версія:</strong> 18.0.1.0.8</p>
         <p>Синхронізуйте моделі Odoo з зовнішніми API через RESTful інтерфейси.</p>
         <ul style={{fontSize: '0.9em'}}>
           <li>Двонаправлена синхронізація</li>
@@ -117,7 +117,7 @@ import Link from '@docusaurus/Link';
         <h3>🏦 ПриватБанк24 бізнес: імпорт банківських виписок</h3>
       </div>
       <div className="card__body">
-        <p><strong>Версія:</strong> 18.0.1.0.4</p>
+        <p><strong>Версія:</strong> 18.0.1.0.8</p>
         <p>Імпорт банківських виписок з ПриватБанку</p>
         <ul style={{fontSize: '0.9em'}}>
           <li>Автоматичний імпорт виписок</li>

@@ -167,18 +167,10 @@ Some APIs use custom API key authentication:
 ### Configuration
 
 1. **Header-based API Key**
-   ```python
-   # In transformation script
-   result['headers'] = {
-       'X-API-Key': 'your-api-key-here'
-   }
-   ```
-
-2. **Query Parameter API Key**
-   ```python
-   # Append to URL
-   url = f"{base_url}?api_key={api_key}"
-   ```
+   - Navigate to the **Headers** tab in your API configuration
+   - Add a new row in the headers table
+   - Set the **Key** field to `X-API-Key`
+   - Set the **Value** field to `your-api-key-here`
 
 ## Testing Authentication
 

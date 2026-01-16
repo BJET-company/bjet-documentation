@@ -19,7 +19,7 @@ import Link from '@docusaurus/Link';
         <h3>📦 API Synchronization</h3>
       </div>
       <div className="card__body">
-        <p><strong>Version:</strong> 18.0.1.0.4</p>
+        <p><strong>Version:</strong> 18.0.1.0.8</p>
         <p>Synchronize Odoo models with external APIs through RESTful interfaces.</p>
         <ul style={{fontSize: '0.9em'}}>
           <li>Bidirectional sync</li>
@@ -117,7 +117,7 @@ import Link from '@docusaurus/Link';
          <h3>🏦 PrivatBank 24 business: import of bank statement </h3>
        </div>
        <div className="card__body">
-         <p><strong>Version:</strong> 18.0.1.0.4</p>
+         <p><strong>Version:</strong> 18.0.1.0.8</p>
          <p>Importing bank statements from PrivatBank</p>
          <ul style={{fontSize: '0.9em'}}>
            <li>Automatic statement import</li>

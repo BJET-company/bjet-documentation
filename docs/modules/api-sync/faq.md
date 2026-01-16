@@ -7,7 +7,7 @@ description: Common questions and answers about the BJET API Synchronization Mod
 
 # Frequently Asked Questions
 
-<span className="version-badge">v18.0.1.0.4</span>
+<span className="version-badge">v18.0.1.0.8</span>
 
 Common questions about the BJET API Synchronization Module.
 
@@ -19,7 +19,7 @@ The BJET API Synchronization Module enables bidirectional data synchronization b
 
 ### Which Odoo versions are supported?
 
-This version (18.0.1.0.4) is designed for Odoo 18.0.
+This version (18.0.1.0.8) is designed for Odoo 18.0.
 
 ### What authentication methods are supported?
 
@@ -64,12 +64,6 @@ Use Python transformation scripts in the field mapping configuration to convert 
 
 - **Inbound**: Receives data from external systems into Odoo
 - **Outbound**: Sends data from Odoo to external systems
-
-### How do I test my configuration?
-
-1. Use the **Test Connection** button
-2. Check Odoo logs for errors
-3. Start with simple test data
 
 ### What if the external API is unavailable?
 

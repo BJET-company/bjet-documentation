@@ -1,4 +1,4 @@
-from operator import index---
+---
 id: base-automation
 title: Base Automation Configuration
 sidebar_label: Base Automation
