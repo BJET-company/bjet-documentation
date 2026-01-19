@@ -7,8 +7,6 @@ keywords: [performance, optimization, pagination, batch, caching]
 
 # Performance Optimization
 
-<span className="version-badge">v18.0.1.0.8</span>
-
 The BJET API Synchronization Module includes several performance optimization features to ensure efficient operation.
 
 ## Pagination Support

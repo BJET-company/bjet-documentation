@@ -7,19 +7,17 @@ description: Common questions and answers about the BJET API Synchronization Mod
 
 # Frequently Asked Questions
 
-<span className="version-badge">v18.0.1.0.8</span>
-
 Common questions about the BJET API Synchronization Module.
 
 ## General Questions
 
 ### What is the BJET API Synchronization Module?
 
-The BJET API Synchronization Module enables bidirectional data synchronization between Odoo 18.0 and external systems via REST APIs. It supports both inbound (receiving data) and outbound (sending data) synchronization.
+The BJET API Synchronization Module enables bidirectional data synchronization between Odoo Community or Enterprise and external systems via REST APIs. It supports both inbound (receiving data) and outbound (sending data) synchronization.
 
 ### Which Odoo versions are supported?
 
-This version (18.0.1.0.8) is designed for Odoo 18.0.
+The latest versions can be viewed on the Odoo App Store: https://apps.odoo.com/apps/modules/19.0/bjet_api_sync
 
 ### What authentication methods are supported?
 
