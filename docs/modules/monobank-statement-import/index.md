@@ -25,12 +25,6 @@ The primary purpose of the module is to load Monobank data into Odoo.
 
 Further processing (reconciliation, matching with documents, file-based import, etc.) is handled by standard Odoo modules or OCA modules.
 
-## Module Version
-
-**Version:** 18.0.1.0.8
-
-**Supported Odoo Versions:** 18.0 Community/Enterprise
-
 ## Quick Links
 
 - [Installation and Activation](./installation.md)

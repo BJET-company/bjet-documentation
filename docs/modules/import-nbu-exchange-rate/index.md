@@ -18,11 +18,6 @@ The module is designed for companies that want to:
 - Manually download exchange rates for a specific period;
 - Configure automatic exchange rate updates on a schedule.
 
-## Module Version
-
-**Version:** 18.0.1.0.2
-**Supported Odoo Versions:** 18.0 Community/Enterprise
-
 ## Quick Links
 
 - [Installation and Activation](./installation.md)
