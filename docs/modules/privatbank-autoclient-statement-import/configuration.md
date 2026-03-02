@@ -26,20 +26,18 @@ If you later select a different Bank Feeds option — the PrivatBank tab will be
 
 ### Step 2: Configuring the PrivatBank Tab
 
-On the **PrivatBank** tab, fill in the following fields:
+On the **PrivatBank** tab, fill in the following field:
 
 - **PrivatBank24 Autoclient Token**
-
-- **PrivatBank24 Autoclient ID**
 
 To obtain authorization credentials, follow the link https://docs.google.com/document/d/e/2PACX-1vTtKvGa3P4E-lDqLg3bHRF6Wi9S7GIjSMFEFxII5qQZBGxuTXs25hQNiUU1hMZQhOyx6BNvIZ1bVKSr/pub
 and complete all the steps described in the section **Creating a profile and obtaining authorization data**
 
-Copy the obtained Token and ID
+Activate the token and copy it
 
 ![Authorization credentials for API operation](/img/privatbank-autoclient-statement-import/api-authorization-token-display-en.png)
 
-and paste them into the PrivatBank24 Autoclient Token and PrivatBank24 Autoclient ID fields
+Paste it into the PrivatBank24 Autoclient Token field
 
 ![Authorization credentials for API operation in Odoo](/img/privatbank-autoclient-statement-import/privatbank-tab-authentication-setup-en.png)
 
@@ -47,7 +45,7 @@ and paste them into the PrivatBank24 Autoclient Token and PrivatBank24 Autoclien
 
 This specifies how many recent days to load statements for.
 
-**Default value:** - 1 day.
+**Default value:** 1 day.
 
 - After saving the Journal with a filled token, a cron is created that runs daily. If Autoclient PrivatBank24 stops being the Bank Feeds source → the cron is automatically deleted.
 
