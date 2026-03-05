@@ -159,6 +159,10 @@ const config = {
                 label: 'PrivatBank 24 business: import of bank statement',
                 to: '/docs/modules/privatbank-autoclient-statement-import',
               },
+              {
+                label: 'MRP Component Substitution with Priority Levels',
+                to: '/docs/modules/mrp-substitution',
+              },
               // Add more modules here as they become available
             ],
           },

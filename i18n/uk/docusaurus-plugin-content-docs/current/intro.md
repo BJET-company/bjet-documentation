@@ -134,6 +134,30 @@ import Link from '@docusaurus/Link';
       </div>
     </div>
   </div>
+
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>🔄 Аналоги компонентів виробництва з пріоритетами</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Версія:</strong> 18.0.1.0.6</p>
+        <p>Автоматична заміна дефіцитних компонентів на аналоги з урахуванням пріоритету.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Заміна за пріоритетами</li>
+          <li>Коефіцієнт заміни</li>
+          <li>Часткова заміна з кількох замінників</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/mrp-substitution">
+          Переглянути документацію
+        </Link>
+      </div>
+    </div>
+  </div>
 </div>
 
 ## Швидкі посилання

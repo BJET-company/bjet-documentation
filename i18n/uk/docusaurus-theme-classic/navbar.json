@@ -55,6 +55,10 @@
     "message": "Монобанк: імпорт банківських виписок",
     "description": "Navbar item with label Monobank: Bank Statements Import"
   },
+  "item.label.MRP Component Substitution with Priority Levels": {
+    "message": "Аналоги компонентів виробництва з пріоритетами",
+    "description": "Navbar item with label MRP Component Substitution with Priority Levels"
+  },
   "logo.alt": {
     "message": "BJET Logo",
     "description": "The alt text of navbar logo"
