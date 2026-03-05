@@ -134,9 +134,33 @@ import Link from '@docusaurus/Link';
        </div>
      </div>
   </div>
+
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>🔄 MRP Component Substitution with Priority Levels</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Version:</strong> 18.0.1.0.6</p>
+        <p>Automatic replacement of out-of-stock components with predefined substitutes.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Priority-based substitution</li>
+          <li>Substitution ratio</li>
+          <li>Partial replacement from multiple substitutes</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/mrp-substitution">
+          View Documentation
+        </Link>
+      </div>
+    </div>
+  </div>
 </div>
 
-  
+
 
 ## Quick Links
 

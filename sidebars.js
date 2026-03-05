@@ -132,6 +132,19 @@ const sidebars = {
             'modules/privatbank-autoclient-statement-import/troubleshooting',
           ],
         },
+        {
+          type: 'category',
+          label: 'MRP Component Substitution with Priority Levels',
+          link: {
+            type: 'doc',
+            id: 'modules/mrp-substitution/index',
+          },
+          items: [
+            'modules/mrp-substitution/installation',
+            'modules/mrp-substitution/configuration',
+            'modules/mrp-substitution/troubleshooting',
+          ],
+        },
         // Future modules will be added here
         // {
         //   type: 'category',

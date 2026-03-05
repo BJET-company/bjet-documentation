@@ -78,5 +78,9 @@
   "sidebar.tutorialSidebar.category.Monobank: Bank Statements Import": {
     "message": "Монобанк: імпорт банківських виписок",
     "description": "The label for category Monobank: Bank Statements Import in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.MRP Component Substitution with Priority Levels": {
+    "message": "Аналоги компонентів виробництва з пріоритетами",
+    "description": "The label for category MRP Component Substitution with Priority Levels in sidebar tutorialSidebar"
   }
 }
