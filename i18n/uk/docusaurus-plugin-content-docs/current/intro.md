@@ -160,6 +160,32 @@ import Link from '@docusaurus/Link';
   </div>
 </div>
 
+<div className="row margin-bottom--lg">
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>🏭 СКВ (Структура BOM / Ієрархія компонентів у виробництві)</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Версія:</strong> 18.0.1.0.7</p>
+        <p>Миттєвий перегляд повної ієрархії всіх матеріалів виробу у специфікаціях та замовленнях на виробництво.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Повна структура матеріалів виробу</li>
+          <li>Перевірка наявності компонентів</li>
+          <li>Автоматичний перерахунок кількості</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/mrp-bom-structure">
+          Переглянути документацію
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
+
 ## Швидкі посилання
 
 - 📚 [Посібник з конфігурації API Sync](/docs/modules/api-sync/configuration/overview)

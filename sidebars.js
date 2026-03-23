@@ -145,6 +145,19 @@ const sidebars = {
             'modules/mrp-substitution/troubleshooting',
           ],
         },
+        {
+          type: 'category',
+          label: 'Manufacturing BOM Structure (MO Hierarchy Tree)',
+          link: {
+            type: 'doc',
+            id: 'modules/mrp-bom-structure/index',
+          },
+          items: [
+            'modules/mrp-bom-structure/installation',
+            'modules/mrp-bom-structure/usage',
+            'modules/mrp-bom-structure/troubleshooting',
+          ],
+        },
         // Future modules will be added here
         // {
         //   type: 'category',

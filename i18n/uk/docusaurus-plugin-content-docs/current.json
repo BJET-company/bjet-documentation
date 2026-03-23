@@ -82,5 +82,9 @@
   "sidebar.tutorialSidebar.category.MRP Component Substitution with Priority Levels": {
     "message": "Аналоги компонентів виробництва з пріоритетами",
     "description": "The label for category MRP Component Substitution with Priority Levels in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Manufacturing BOM Structure (MO Hierarchy Tree)": {
+    "message": "СКВ (Структура BOM / Ієрархія компонентів у виробництві)",
+    "description": "The label for category Manufacturing BOM Structure (MO Hierarchy Tree) in sidebar tutorialSidebar"
   }
 }
