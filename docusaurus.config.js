@@ -163,6 +163,10 @@ const config = {
                 label: 'MRP Component Substitution with Priority Levels',
                 to: '/docs/modules/mrp-substitution',
               },
+              {
+                label: 'Manufacturing BOM Structure (MO Hierarchy Tree)',
+                to: '/docs/modules/mrp-bom-structure',
+              },
               // Add more modules here as they become available
             ],
           },

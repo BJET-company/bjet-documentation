@@ -59,6 +59,10 @@
     "message": "Аналоги компонентів виробництва з пріоритетами",
     "description": "Navbar item with label MRP Component Substitution with Priority Levels"
   },
+  "item.label.Manufacturing BOM Structure (MO Hierarchy Tree)": {
+    "message": "СКВ (Структура BOM / Ієрархія компонентів у виробництві)",
+    "description": "Navbar item with label Manufacturing BOM Structure (MO Hierarchy Tree)"
+  },
   "logo.alt": {
     "message": "BJET Logo",
     "description": "The alt text of navbar logo"

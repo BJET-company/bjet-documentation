@@ -160,7 +160,31 @@ import Link from '@docusaurus/Link';
   </div>
 </div>
 
-
+<div className="row margin-bottom--lg">
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>🏭 Manufacturing BOM Structure (MO Hierarchy Tree)</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Version:</strong> 18.0.1.0.7</p>
+        <p>Instantly view the complete hierarchy of all materials used in a product in Bills of Materials and Manufacturing Orders.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Full product material structure</li>
+          <li>Component availability check</li>
+          <li>Automatic quantity recalculation</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/mrp-bom-structure">
+          View Documentation
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Quick Links
 
