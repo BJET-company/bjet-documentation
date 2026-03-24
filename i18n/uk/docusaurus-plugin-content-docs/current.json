@@ -86,5 +86,9 @@
   "sidebar.tutorialSidebar.category.Manufacturing BOM Structure (MO Hierarchy Tree)": {
     "message": "СКВ (Структура BOM / Ієрархія компонентів у виробництві)",
     "description": "The label for category Manufacturing BOM Structure (MO Hierarchy Tree) in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.LiqPay Website Payments": {
+    "message": "Платежі LiqPay на Odoo вебсайті",
+    "description": "The label for category LiqPay Website Payments in sidebar tutorialSidebar"
   }
 }

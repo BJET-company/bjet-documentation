@@ -158,6 +158,20 @@ const sidebars = {
             'modules/mrp-bom-structure/troubleshooting',
           ],
         },
+        {
+          type: 'category',
+          label: 'LiqPay Website Payments',
+          link: {
+            type: 'doc',
+            id: 'modules/liqpay-payment/index',
+          },
+          items: [
+            'modules/liqpay-payment/installation',
+            'modules/liqpay-payment/configuration',
+            'modules/liqpay-payment/usage',
+            'modules/liqpay-payment/troubleshooting',
+          ],
+        },
         // Future modules will be added here
         // {
         //   type: 'category',

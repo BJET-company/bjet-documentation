@@ -167,6 +167,10 @@ const config = {
                 label: 'Manufacturing BOM Structure (MO Hierarchy Tree)',
                 to: '/docs/modules/mrp-bom-structure',
               },
+              {
+                label: 'LiqPay Website Payments',
+                to: '/docs/modules/liqpay-payment',
+              },
               // Add more modules here as they become available
             ],
           },
