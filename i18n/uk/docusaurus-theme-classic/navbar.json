@@ -63,6 +63,10 @@
     "message": "СКВ (Структура BOM / Ієрархія компонентів у виробництві)",
     "description": "Navbar item with label Manufacturing BOM Structure (MO Hierarchy Tree)"
   },
+  "item.label.LiqPay Website Payments": {
+    "message": "Платежі LiqPay на Odoo вебсайті",
+    "description": "Navbar item with label LiqPay Website Payments"
+  },
   "logo.alt": {
     "message": "BJET Logo",
     "description": "The alt text of navbar logo"

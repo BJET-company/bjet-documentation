@@ -184,6 +184,29 @@ import Link from '@docusaurus/Link';
       </div>
     </div>
   </div>
+
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>💳 LiqPay Website Payments</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Version:</strong> 18.0.1.0.5</p>
+        <p>Adds LiqPay as a payment provider in Odoo for eCommerce Website Checkout, Sales Orders, Invoices, and Payment Links with secure online payments.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Add LiqPay as a payment provider</li>
+          <li>Give opportunity to pay from website</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/liqpay-payment">
+          View Documentation
+        </Link>
+      </div>
+    </div>
+  </div>
 </div>
 
 ## Quick Links

@@ -184,6 +184,30 @@ import Link from '@docusaurus/Link';
       </div>
     </div>
   </div>
+
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>💳 Платежі LiqPay на Odoo вебсайті</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Версія:</strong> 18.0.1.0.5</p>
+        <p>Додає LiqPay як платіжного провайдера в Odoo для оплати на вебсайті (eCommerce), замовлень на продаж, рахунків та платіжних посилань із безпечною онлайн-оплатою.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Додає LiqPay як платіжного провайдера</li>
+          <li>Можливість оплати з вебсайту</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/liqpay-payment">
+          Переглянути документацію
+        </Link>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 ## Швидкі посилання
