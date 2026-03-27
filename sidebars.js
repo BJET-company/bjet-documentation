@@ -172,6 +172,20 @@ const sidebars = {
             'modules/liqpay-payment/troubleshooting',
           ],
         },
+        {
+          type: 'category',
+          label: 'LiqPay Odoo Subscription Payments',
+          link: {
+            type: 'doc',
+            id: 'modules/liqpay-subscription/index',
+          },
+          items: [
+            'modules/liqpay-subscription/installation',
+            'modules/liqpay-subscription/configuration',
+            'modules/liqpay-subscription/usage',
+            'modules/liqpay-subscription/troubleshooting',
+          ],
+        },
         // Future modules will be added here
         // {
         //   type: 'category',

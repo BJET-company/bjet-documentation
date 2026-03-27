@@ -207,6 +207,29 @@ import Link from '@docusaurus/Link';
       </div>
     </div>
   </div>
+
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>💳 LiqPay Odoo Subscription Payments</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Version:</strong> 18.0.1.0.4</p>
+        <p>Odoo LiqPay recurring subscription payments module enables automated recurring card payments for subscription products via Website Checkout and payment links, ensuring reliable billing, uninterrupted subscriptions, and predictable revenue liqpay recurring payments</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Automated recurring card payments via LiqPay</li>
+          <li>Subscription management with automatic billing cycles</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/liqpay-subscription">
+          View Documentation
+        </Link>
+      </div>
+    </div>
+  </div>
 </div>
 
 ## Quick Links

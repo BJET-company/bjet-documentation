@@ -20,4 +20,4 @@ If the Invoicing [account] or Payment Engine [payment] modules are not yet insta
 
 ## Next Steps
 
-After installing the module, proceed to [Module Usage](./usage.md) to learn about the functionality.
+After installing the module, proceed to [Configuration](./configuration.md) to learn about the functionality.
