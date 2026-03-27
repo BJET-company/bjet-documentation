@@ -208,6 +208,28 @@ import Link from '@docusaurus/Link';
     </div>
   </div>
 
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>💳 Платежі LiqPay для підписок в Odoo</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Версія:</strong> 18.0.1.0.4</p>
+        <p>Модуль автоматичних рекурентних платежів LiqPay для підписок в Odoo забезпечує автоматизовані періодичні списання з картки клієнта для продуктів-підписок через оформлення на вебсайті та платіжні посилання.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Автоматичні рекурентні платежі через LiqPay</li>
+          <li>Управління підписками з автоматичними платіжними циклами</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/liqpay-subscription">
+          Переглянути документацію
+        </Link>
+      </div>
+    </div>
+  </div>
 </div>
 
 ## Швидкі посилання

@@ -171,6 +171,10 @@ const config = {
                 label: 'LiqPay Website Payments',
                 to: '/docs/modules/liqpay-payment',
               },
+              {
+                label: 'LiqPay Odoo Subscription Payments',
+                to: '/docs/modules/liqpay-subscription',
+              },
               // Add more modules here as they become available
             ],
           },
