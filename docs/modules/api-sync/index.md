@@ -6,10 +6,6 @@ sidebar_label: Overview
 
 # API Synchronization Module
 
-**Version:** 18.0.1.0.8  
-**License:** OPL-1  
-**Author:** BJET  
-**Compatibility:** Odoo 18.0
 
 ## Module Overview
 
