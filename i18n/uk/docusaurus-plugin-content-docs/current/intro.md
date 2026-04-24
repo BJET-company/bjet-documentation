@@ -232,6 +232,32 @@ import Link from '@docusaurus/Link';
   </div>
 </div>
 
+<div className="row margin-bottom--lg">
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>🚚 Нова Пошта</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Версія:</strong> 18.0.1.1.8</p>
+        <p>Інтеграція Odoo з «Новою Поштою», що автоматизує процеси доставки: розрахунок вартості, створення експрес-накладних (ТТН), друк Zebra-етикеток та відстеження статусу посилок у реальному часі.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Створення, оновлення та скасування накладних через API</li>
+          <li>Накладний платіж (COD) з рахунком для виплати</li>
+          <li>Щоденна синхронізація міст, відділень та поштоматів</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/nova-post">
+          Переглянути документацію
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
+
 ## Швидкі посилання
 
 - 📚 [Посібник з конфігурації API Sync](/docs/modules/api-sync/configuration/overview)

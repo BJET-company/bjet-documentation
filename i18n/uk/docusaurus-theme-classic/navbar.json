@@ -71,6 +71,10 @@
     "message": "Платежі LiqPay для підписок в Odoo",
     "description": "Navbar item with label LiqPay Odoo Subscription Payments"
   },
+  "item.label.Nova Poshta Delivery (Ukraine)": {
+    "message": "Нова Пошта",
+    "description": "Navbar item with label Nova Poshta Delivery (Ukraine)"
+  },
   "logo.alt": {
     "message": "BJET Logo",
     "description": "The alt text of navbar logo"

@@ -175,6 +175,10 @@ const config = {
                 label: 'LiqPay Odoo Subscription Payments',
                 to: '/docs/modules/liqpay-subscription',
               },
+              {
+                label: 'Nova Poshta Delivery (Ukraine)',
+                to: '/docs/modules/nova-post',
+              },
               // Add more modules here as they become available
             ],
           },

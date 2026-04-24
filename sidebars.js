@@ -186,6 +186,22 @@ const sidebars = {
             'modules/liqpay-subscription/troubleshooting',
           ],
         },
+        {
+          type: 'category',
+          label: 'Nova Poshta Delivery (Ukraine)',
+          link: {
+            type: 'doc',
+            id: 'modules/nova-post/index',
+          },
+          items: [
+            'modules/nova-post/configuration',
+            'modules/nova-post/orders-overview',
+            'modules/nova-post/sales-workflow',
+            'modules/nova-post/purchase-workflow',
+            'modules/nova-post/consignment-notes',
+            'modules/nova-post/troubleshooting',
+          ],
+        },
         // Future modules will be added here
         // {
         //   type: 'category',

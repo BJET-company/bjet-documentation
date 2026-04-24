@@ -94,5 +94,9 @@
   "sidebar.tutorialSidebar.category.LiqPay Odoo Subscription Payments": {
     "message": "Платежі LiqPay для підписок в Odoo",
     "description": "The label for category LiqPay Odoo Subscription Payments in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Nova Poshta Delivery (Ukraine)": {
+    "message": "Нова Пошта",
+    "description": "The label for category Nova Poshta Delivery (Ukraine) in sidebar tutorialSidebar"
   }
 }

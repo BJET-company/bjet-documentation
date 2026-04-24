@@ -232,6 +232,32 @@ import Link from '@docusaurus/Link';
   </div>
 </div>
 
+<div className="row margin-bottom--lg">
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>🚚 Nova Poshta Delivery (Ukraine)</h3>
+      </div>
+      <div className="card__body">
+        <p><strong>Version:</strong> 18.0.1.1.8</p>
+        <p>Odoo–Nova Poshta integration that automates customer delivery workflows: shipping rate calculation, Express Waybill (TTN) creation, Zebra label printing, and real-time shipment status tracking.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Waybill creation, update, and cancellation via API</li>
+          <li>Cash on Delivery (COD) with payout account</li>
+          <li>Daily sync of cities, branches, and parcel lockers</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/nova-post">
+          View Documentation
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
+
 ## Quick Links
 
 - 📚 [API Sync Configuration Guide](/docs/modules/api-sync/configuration/overview)
