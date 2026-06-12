@@ -28,6 +28,17 @@ In the **Substitutes (MRP)** tab:
 
 ![Substitutes (MRP) tab with substitute product lines](/img/mrp-substitution/substitutes-list-en.png)
 
+## Substitution Control at the Specification Level (BoM)
+
+Now you can independently determine whether to apply substitutes for a specific product directly in its specification:
+
+1. Go to **Manufacturing → Products → Bills of Materials** and open the required specification.
+2. In the components table, find the new column **"Allow Substitution"**.
+3. If the checkbox is enabled (default value is YES) — the system will automatically search for substitutes in case of raw material shortage during manufacturing confirmation.
+4. If the checkbox is disabled — automatic substitution for this line is completely blocked. The system will use the basic Odoo flow (the component will remain unavailable until the actual replenishment of the stock), even if substitutes are configured and available in the product form itself.
+
+![Allow substitution](/img/mrp-substitution/allow-substitution-en.png)
+
 ## About the Substitution Ratio
 
 The ratio defines how much of the base component is covered by one unit of the substitute.
