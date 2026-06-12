@@ -8,7 +8,7 @@ sidebar_label: Print Form Builder
 
 ## Module Description
 
-Print Form Builder is a module for Odoo 18 (Community and Enterprise) that provides tools for creating, editing, and managing print forms (invoices, acts, delivery notes, etc.).
+Print Form Builder is a module for Odoo (Community and Enterprise) that provides tools for creating, editing, and managing print forms (invoices, acts, delivery notes, etc.).
 
 It allows system administrators to create PDF document templates using HTML/CSS and dynamic Odoo variables.
 

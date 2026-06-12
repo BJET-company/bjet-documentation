@@ -14,6 +14,7 @@ Configure Odoo to receive data from external systems through RESTful API endpoin
 Navigate to **Settings > Technical > BJ API > API Configurations** in your Odoo interface.
 
 ![API Settings Menu](/img/api-sync/api-settings-menu.png)
+
 *API Configurations menu in Technical Settings*
 
 ### Step 2: Create New Configuration

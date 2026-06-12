@@ -26,7 +26,7 @@
     "message": "🔄 Модуль синхронізації API"
   },
   "homepage.apiSync.description": {
-    "message": "Версія 18.0.1.0.8 - Всебічна двонаправлена інтеграція API для Odoo 18.0"
+    "message": "Всебічна двонаправлена інтеграція API для Odoo"
   },
   "homepage.apiSync.features.inbound": {
     "message": "Вхідні та вихідні API"

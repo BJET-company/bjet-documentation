@@ -19,7 +19,6 @@ import Link from '@docusaurus/Link';
         <h3>📦 API Synchronization</h3>
       </div>
       <div className="card__body">
-        <p><strong>Version:</strong> 18.0.1.0.8</p>
         <p>Synchronize Odoo models with external APIs through RESTful interfaces.</p>
         <ul style={{fontSize: '0.9em'}}>
           <li>Bidirectional sync</li>
@@ -43,7 +42,6 @@ import Link from '@docusaurus/Link';
         <h3>📝 Print Form Builder</h3>
       </div>
       <div className="card__body">
-        <p><strong>Version:</strong> Coming Soon</p>
         <p>Create and customize professional print forms for your Odoo reports.</p>
         <ul style={{fontSize: '0.9em'}}>
           <li>Custom templates</li>
@@ -67,7 +65,6 @@ import Link from '@docusaurus/Link';
         <h3>💱 Import NBU Exchange Rate</h3>
       </div>
       <div className="card__body">
-        <p><strong>Version:</strong> 18.0.1.0.2</p>
         <p>Automatic and manual import of exchange rates from the National Bank of Ukraine.</p>
         <ul style={{fontSize: '0.9em'}}>
           <li>Automatic rate updates</li>
@@ -93,7 +90,6 @@ import Link from '@docusaurus/Link';
         <h3>🏦 Monobank: Bank Statements Import</h3>
       </div>
       <div className="card__body">
-        <p><strong>Version:</strong> 18.0.1.0.1</p>
         <p>Direct integration between Monobank and Odoo for automatic bank statement import.</p>
         <ul style={{fontSize: '0.9em'}}>
           <li>Automatic statement import</li>
@@ -117,7 +113,6 @@ import Link from '@docusaurus/Link';
          <h3>🏦 PrivatBank 24 business: import of bank statement </h3>
        </div>
        <div className="card__body">
-         <p><strong>Version:</strong> 18.0.1.0.5</p>
          <p>Importing bank statements from PrivatBank</p>
          <ul style={{fontSize: '0.9em'}}>
            <li>Automatic statement import</li>
@@ -141,7 +136,6 @@ import Link from '@docusaurus/Link';
         <h3>🔄 MRP Component Substitution with Priority Levels</h3>
       </div>
       <div className="card__body">
-        <p><strong>Version:</strong> 18.0.1.0.6</p>
         <p>Automatic replacement of out-of-stock components with predefined substitutes.</p>
         <ul style={{fontSize: '0.9em'}}>
           <li>Priority-based substitution</li>
@@ -167,7 +161,6 @@ import Link from '@docusaurus/Link';
         <h3>🏭 Manufacturing BOM Structure (MO Hierarchy Tree)</h3>
       </div>
       <div className="card__body">
-        <p><strong>Version:</strong> 18.0.1.0.7</p>
         <p>Instantly view the complete hierarchy of all materials used in a product in Bills of Materials and Manufacturing Orders.</p>
         <ul style={{fontSize: '0.9em'}}>
           <li>Full product material structure</li>
@@ -191,7 +184,6 @@ import Link from '@docusaurus/Link';
         <h3>💳 LiqPay Website Payments</h3>
       </div>
       <div className="card__body">
-        <p><strong>Version:</strong> 18.0.1.0.5</p>
         <p>Adds LiqPay as a payment provider in Odoo for eCommerce Website Checkout, Sales Orders, Invoices, and Payment Links with secure online payments.</p>
         <ul style={{fontSize: '0.9em'}}>
           <li>Add LiqPay as a payment provider</li>
@@ -214,7 +206,6 @@ import Link from '@docusaurus/Link';
         <h3>💳 LiqPay Odoo Subscription Payments</h3>
       </div>
       <div className="card__body">
-        <p><strong>Version:</strong> 18.0.1.0.4</p>
         <p>Odoo LiqPay recurring subscription payments module enables automated recurring card payments for subscription products via Website Checkout and payment links, ensuring reliable billing, uninterrupted subscriptions, and predictable revenue liqpay recurring payments</p>
         <ul style={{fontSize: '0.9em'}}>
           <li>Automated recurring card payments via LiqPay</li>
@@ -239,7 +230,6 @@ import Link from '@docusaurus/Link';
         <h3>🚚 Nova Poshta Delivery (Ukraine)</h3>
       </div>
       <div className="card__body">
-        <p><strong>Version:</strong> 18.0.1.1.8</p>
         <p>Odoo–Nova Poshta integration that automates customer delivery workflows: shipping rate calculation, Express Waybill (TTN) creation, Zebra label printing, and real-time shipment status tracking.</p>
         <ul style={{fontSize: '0.9em'}}>
           <li>Waybill creation, update, and cancellation via API</li>
@@ -273,7 +263,7 @@ import Link from '@docusaurus/Link';
 - **Commercial Support:** Available for enterprise deployments
 
 ### Module Compatibility
-All modules are designed for **Odoo 18.0** and follow BJET's quality standards for enterprise deployment.
+All modules are designed for **Odoo** and follow BJET's quality standards for enterprise deployment.
 
 ## How to Use This Documentation
 

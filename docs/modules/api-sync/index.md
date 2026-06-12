@@ -150,12 +150,6 @@ Common issues, solutions, and best practices
 📮 **[Postman Collection](/postman)**  
 Download pre-configured API testing collection
 
-## Version History
-
-| Version    | Release Date | Notes |
-|------------|--------------|-------|
-| 18.0.1.0.8 | Current | Latest stable release for Odoo 18.0 |
-
 ## Support Information
 
 - **Website:** [https://bjetpro.com/](https://bjetpro.com/)

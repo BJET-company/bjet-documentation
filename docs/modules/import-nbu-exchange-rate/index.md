@@ -8,7 +8,7 @@ sidebar_label: Import NBU Exchange Rate
 
 ## Module Description
 
-The NBU Exchange Rate module allows you to automatically or manually import NBU exchange rates into Odoo 18 (Community/Enterprise).
+The NBU Exchange Rate module allows you to automatically or manually import NBU exchange rates into Odoo (Community/Enterprise).
 
 ## Purpose and Features
 
