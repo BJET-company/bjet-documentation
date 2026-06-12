@@ -14,6 +14,7 @@ Configure Odoo to send data to external systems automatically based on triggers 
 1. Navigate to **Settings > Technical > BJ API > API Configurations**
 
 ![API Settings Menu](/img/api-sync/api-settings-menu.png)
+
 *API Configurations menu in Technical Settings*
 
 2. Click **Create**

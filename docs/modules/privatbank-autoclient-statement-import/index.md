@@ -8,7 +8,7 @@ sidebar_label: "PrivatBank24 Business: Bank Statement Import"
 
 ## Module Description
 
-The PrivatBank Autoclient Statement Import module provides direct integration between PrivatBank and Odoo 18 (Community and Enterprise).
+The PrivatBank Autoclient Statement Import module provides direct integration between PrivatBank and Odoo (Community and Enterprise).
 
 It automatically imports bank statements into standard Odoo models: `account.bank.statement` and `account.bank.statement.line`
 
