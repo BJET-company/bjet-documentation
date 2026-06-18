@@ -29,6 +29,7 @@ graph TD
 Navigate to **Settings → Technical → BJ API → API Configurations** in your Odoo interface.
 
 ![API Settings Menu](/img/api-sync/api-settings-menu.png)
+
 *Navigate to Settings → Technical → BJ API → API Configurations*
 
 ## Step 2: Create New Configuration
