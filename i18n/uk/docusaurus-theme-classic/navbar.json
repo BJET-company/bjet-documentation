@@ -75,6 +75,10 @@
     "message": "Нова Пошта",
     "description": "Navbar item with label Nova Poshta Delivery (Ukraine)"
   },
+  "item.label.Plata by Mono Website Payments": {
+    "message": "Платежі Plata by Mono на вебсайті",
+    "description": "Navbar item with label Plata by Mono Website Payments"
+  },
   "logo.alt": {
     "message": "BJET Logo",
     "description": "The alt text of navbar logo"

@@ -246,6 +246,29 @@ import Link from '@docusaurus/Link';
       </div>
     </div>
   </div>
+
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>💳 Платежі Plata by Mono на вебсайті</h3>
+      </div>
+      <div className="card__body">
+        <p>Додає в Odoo платіжного провайдера Plata by Mono (monobank) для онлайн-оплат карткою при оформленні замовлень на сайті, за посиланнями на оплату з Рахунків та Замовлень на продаж і через портал клієнта.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Онлайн-оплата карткою при оформленні замовлень на сайті</li>
+          <li>Посилання на оплату з Рахунків та Замовлень на продаж</li>
+          <li>Повне та часткове повернення коштів на картку клієнта</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/plata-by-mono">
+          Переглянути документацію
+        </Link>
+      </div>
+    </div>
+  </div>
 </div>
 
 ## Швидкі посилання

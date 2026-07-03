@@ -98,5 +98,9 @@
   "sidebar.tutorialSidebar.category.Nova Poshta Delivery (Ukraine)": {
     "message": "Нова Пошта",
     "description": "The label for category Nova Poshta Delivery (Ukraine) in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Plata by Mono Website Payments": {
+    "message": "Платежі Plata by Mono на вебсайті",
+    "description": "The label for category Plata by Mono Website Payments in sidebar tutorialSidebar"
   }
 }
