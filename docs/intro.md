@@ -246,6 +246,29 @@ import Link from '@docusaurus/Link';
       </div>
     </div>
   </div>
+
+  <div className="col col--4">
+    <div className="card shadow--md">
+      <div className="card__header">
+        <h3>💳 Plata by Mono Website Payments</h3>
+      </div>
+      <div className="card__body">
+        <p>Adds Plata by Mono (monobank) as a payment provider in Odoo for online card payments at eCommerce checkout, via Payment Link from Invoices and Sales Orders, and through the customer portal.</p>
+        <ul style={{fontSize: '0.9em'}}>
+          <li>Online card payments at website / eCommerce checkout</li>
+          <li>Payment Links from Invoices and Sales Orders</li>
+          <li>Full and partial refunds to the customer's card</li>
+        </ul>
+      </div>
+      <div className="card__footer">
+        <Link
+          className="button button--primary button--block"
+          to="/docs/modules/plata-by-mono">
+          View Documentation
+        </Link>
+      </div>
+    </div>
+  </div>
 </div>
 
 ## Quick Links

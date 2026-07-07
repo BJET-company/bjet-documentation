@@ -179,6 +179,10 @@ const config = {
                 label: 'Nova Poshta Delivery (Ukraine)',
                 to: '/docs/modules/nova-post',
               },
+              {
+                label: 'Plata by Mono Website Payments',
+                to: '/docs/modules/plata-by-mono',
+              },
               // Add more modules here as they become available
             ],
           },

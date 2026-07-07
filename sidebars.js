@@ -202,6 +202,20 @@ const sidebars = {
             'modules/nova-post/troubleshooting',
           ],
         },
+        {
+          type: 'category',
+          label: 'Plata by Mono Website Payments',
+          link: {
+            type: 'doc',
+            id: 'modules/plata-by-mono/index',
+          },
+          items: [
+            'modules/plata-by-mono/installation',
+            'modules/plata-by-mono/configuration',
+            'modules/plata-by-mono/usage',
+            'modules/plata-by-mono/troubleshooting',
+          ],
+        },
         // Future modules will be added here
         // {
         //   type: 'category',
