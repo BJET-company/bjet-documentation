@@ -188,7 +188,7 @@ This documentation is licensed under OPL-1 (Odoo Proprietary License).
 ## Support
 
 - **Email**: support@bjetpro.com
-- **Website**: [https://bjetpro.com](https://bjetpro.com)
+- **Website**: [https://register.bjetpro.com](https://register.bjetpro.com)
 - **Documentation**: [https://bjet.github.io/bjet-documentation/](https://bjet.github.io/bjet-documentation/)
 - **Issues**: [GitHub Issues](https://github.com/bjet/bjet-documentation/issues)
 
@@ -207,5 +207,5 @@ This documentation is licensed under OPL-1 (Odoo Proprietary License).
 ---
 
 <div align="center">
-  Copyright © BJET - <a href="https://bjetpro.com">https://bjetpro.com</a>
+  Copyright © BJET - <a href="https://register.bjetpro.com">https://register.bjetpro.com</a>
 </div>

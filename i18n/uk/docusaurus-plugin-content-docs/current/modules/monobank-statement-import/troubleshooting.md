@@ -72,5 +72,4 @@ Monobank API має суворі обмеження на частоту запи
 
 Якщо проблема не вирішується:
 
-- **Веб-сайт:** [https://bjetpro.com/](https://bjetpro.com/)
 - **Email:** [support@bjetpro.com](mailto:support@bjetpro.com)

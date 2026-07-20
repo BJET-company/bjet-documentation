@@ -59,4 +59,3 @@ title: Troubleshooting
 
 If the problem is not resolved, contact support:
 - **Email**: support@bjetpro.com
-- **Website**: https://bjetpro.com

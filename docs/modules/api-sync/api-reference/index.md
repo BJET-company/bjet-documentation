@@ -145,4 +145,3 @@ Download our pre-configured [Postman Collection](/postman) for easy API testing 
 
 For API support and questions:
 - Email: support@bjetpro.com
-- Documentation: https://bjetpro.com/docs
