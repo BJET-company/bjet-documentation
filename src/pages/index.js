@@ -109,7 +109,7 @@ export default function Home() {
                     <li><Link to="/postman"><Translate id="homepage.resources.postman">Postman Collections</Translate></Link></li>
                     <li><Link to="/docs/modules/api-sync/troubleshooting"><Translate id="homepage.resources.troubleshooting">Troubleshooting</Translate></Link></li>
                     <li><Link to="/docs/modules/api-sync/faq"><Translate id="homepage.resources.faq">FAQ</Translate></Link></li>
-                    <li><a href="https://bjetpro.com" target="_blank"><Translate id="homepage.resources.website">BJET Website</Translate></a></li>
+                    <li><a href="https://register.bjetpro.com" target="_blank"><Translate id="homepage.resources.website">BJET Website</Translate></a></li>
                   </ul>
                 </div>
                 <div className="card__footer">
@@ -136,7 +136,7 @@ export default function Home() {
                 </a>
                 <a
                   className="button button--outline button--primary button--lg margin-left--md"
-                  href="https://bjetpro.com"
+                  href="https://register.bjetpro.com"
                   target="_blank">
                   <Translate id="homepage.help.website">🌐 Visit BJET Website</Translate>
                 </a>

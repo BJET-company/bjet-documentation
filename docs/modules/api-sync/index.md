@@ -152,7 +152,7 @@ Download pre-configured API testing collection
 
 ## Support Information
 
-- **Website:** [https://bjetpro.com/](https://bjetpro.com/)
+- **Website:** [https://register.bjetpro.com/](https://register.bjetpro.com/)
 - **Support Email:** [support@bjetpro.com](mailto:support@bjetpro.com)
 - **Commercial Support:** Available for enterprise deployments
 - **Dependencies:** `bj_api_log`, `base_automation`

@@ -281,7 +281,7 @@ import Link from '@docusaurus/Link';
 ## Support & Resources
 
 ### Professional Support
-- **Website:** [https://bjetpro.com/](https://bjetpro.com/)
+- **Website:** [https://register.bjetpro.com/](https://register.bjetpro.com/)
 - **Email:** [support@bjetpro.com](mailto:support@bjetpro.com)
 - **Commercial Support:** Available for enterprise deployments
 
