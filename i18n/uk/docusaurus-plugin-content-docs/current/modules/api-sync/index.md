@@ -152,7 +152,7 @@ graph TB
 
 ## Інформація про підтримку
 
-- **Веб-сайт:** [https://bjetpro.com/](https://bjetpro.com/)
+- **Веб-сайт:** [https://register.bjetpro.com/](https://register.bjetpro.com/)
 - **Електронна пошта підтримки:** [support@bjetpro.com](mailto:support@bjetpro.com)
 - **Комерційна підтримка:** Доступна для корпоративних впроваджень
 - **Залежності:** `bj_api_log`, `base_automation`

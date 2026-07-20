@@ -54,5 +54,4 @@ sidebar_label: Усунення несправностей
 
 Якщо проблема не вирішується:
 
-- **Веб-сайт:** [https://bjetpro.com/](https://bjetpro.com/)
 - **Email:** [support@bjetpro.com](mailto:support@bjetpro.com)

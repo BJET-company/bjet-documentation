@@ -145,4 +145,3 @@ GET /[endpoint]?active=true&state=draft
 
 Для підтримки та питань щодо API:
 - Email: support@bjetpro.com
-- Документація: https://bjetpro.com/docs

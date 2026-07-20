@@ -209,7 +209,7 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://bjetpro.com',
+            href: 'https://register.bjetpro.com',
             label: 'BJET Website',
             position: 'right',
           },
@@ -266,7 +266,7 @@ const config = {
             items: [
               {
                 label: 'BJET Website',
-                href: 'https://bjetpro.com',
+                href: 'https://register.bjetpro.com',
               },
               {
                 label: 'Email Support',

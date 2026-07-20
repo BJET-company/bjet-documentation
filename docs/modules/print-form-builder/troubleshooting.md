@@ -14,7 +14,6 @@ title: Troubleshooting
 
 ## Support Information
 
-- **Website:** https://bjetpro.com/
 - **Support Email:** support@bjetpro.com
 - **Commercial Support:** Available for enterprise implementations
 - **Dependencies:** base, web, bjet_widget_ckeditor

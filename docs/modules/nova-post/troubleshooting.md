@@ -101,5 +101,4 @@ The sender phone is validated as `380XXXXXXXXX` — exactly 12 digits starting w
 
 If the issue is not resolved:
 
-- **Website:** [https://bjetpro.com/](https://bjetpro.com/)
 - **Email:** [support@bjetpro.com](mailto:support@bjetpro.com)

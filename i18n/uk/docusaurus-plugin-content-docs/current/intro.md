@@ -281,7 +281,7 @@ import Link from '@docusaurus/Link';
 ## Підтримка та ресурси
 
 ### Професійна підтримка
-- **Веб-сайт:** [https://bjetpro.com/](https://bjetpro.com/)
+- **Веб-сайт:** [https://register.bjetpro.com/](https://register.bjetpro.com/)
 - **Електронна пошта:** [support@bjetpro.com](mailto:support@bjetpro.com)
 - **Комерційна підтримка:** Доступна для корпоративних впроваджень
 

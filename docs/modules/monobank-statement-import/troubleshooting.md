@@ -72,5 +72,4 @@ If you need to import a longer period, split it into 31-day chunks and wait 60 s
 
 If the issue is not resolved:
 
-- **Website:** [https://bjetpro.com/](https://bjetpro.com/)
 - **Email:** [support@bjetpro.com](mailto:support@bjetpro.com)
